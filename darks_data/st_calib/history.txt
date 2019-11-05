@@ -1,0 +1,474 @@
+
+
+WFC3 History File
+-----------------
+
+Mirror moves are tracked via observatory pages:
+http://www.stsci.edu/hst/observatory/focus/mirrormoves.html
+
+------------------------------------------------------------------------------------------------------------
+
+---------------------------- 2009 -------------------------------
+MJD		day of year and time    month/day	activity	
+
+54962.		2009.131		May 11		STS-125 SM4 shuttle launch
+54963.		2009.132		May 14		WFC3 installed on HST; functional test run
+54968.		2009.137		May 19		HST release
+54971.0000888   2009.140 00:00:08       May 22		IDEBPWR2=Off
+54976.6771720   2009.145 16:15:08       May 27		IDEBPWR2=On  
+
+54993.7083333   2009.162 17:00          June 11         first cooldown of WFC3 starts
+54993.7638888   2009.162 18:20          June 11		temperature reaches -83.5C
+54993.864699    2009.162 20:45:10	June 11		first cold WFC3 SMOV data (bowtie exposures)
+
+54997.299305    2009.166 07:11  	June 15		HST safing (SIC&DH lockup)
+54997.285853    2009.166 06:51:38   	June 15		IDEBPWR2=Off  
+55002.052867    2009.171 01:16:08   	June 20		IDEBPWR2=On  
+55002.193145    2009.171 04:38:08   	June 20		IDEBPWR2=Off  
+55002.199742    2009.171 04:47:38   	June 20		IDEBPWR2=On  
+
+55005.072917    2009.174 01:45:51 	June 23		anneal 1 of SMOV
+
+55008.000000    2009.177 00:00:00	June 26		OPUS/calwf3 update (fix processing of WFC3/IR subarrays [pr.62948])
+
+~55017		2009.186		~July 5		approx.date after which CSM=UVIS position to protect IR darks (done manually in APT; later automatic commanding)
+
+55032.399306	2009.201  9:35:00	July 20		OTA secondary move, +2.97 microns
+
+55032.828703	2009.201 19:53:20 	July 20		anneal 2 of SMOV
+
+55046.0000000	2009.215 00:00:00.	Aug 3		SIAF updates installed (see note below for details)
+
+55063.739095    2009.232 17:44:18   	Aug 20		IDEBPWR2=Off  
+55063.767104    2009.232 18:24:38   	Aug 20		IDEBPWR2=On  
+55064.1146528   2009.233  2:45:06       Aug 21		anneal - 1st from Cy 17 proposal 11909
+
+55088.8545486	2009.257 20:30:43	Sep 14		anneal 	
+
+55105.0000000	2009.274  0:00:00	Oct 1		official start of Cycle 17
+
+55120.5200231	2009.289 12:28:50	Oct 16		anneal - incl. commanding change to lengthen cooldown, see note below
+
+55126.5213773   2009.295 12:30:47	Oct 22		HST safing. SIC&DH lockup condition, similar to June 15 event.
+55126.521388    2009.295 12:30:48   	Oct 22		IDEBPWR2=Off  
+55128.395578    2009.297 09:29:38   	Oct 24		IDEBPWR2=On  
+
+55138.7761806   2009.307 18:37:42	Nov 3		HST safing, SIC&DH lockup. WFC3 detectors not warmed up.
+55138.776018    2009.307 18:37:28   	Nov 3		IDEBPWR2=Off  
+55139.032384    2009.308 00:46:38   	Nov 4		IDEBPWR2=On  
+
+55149.2155903	2009.318 05:10:27 	Nov 14		anneal
+
+55176.8256481   2009.345 19:48:56 	Dec 11		anneal
+
+---------------------------- 2010 -------------------------------
+MJD		day of year and time    month/day	activity	
+
+55202.7013889   2010.006 16:50:27	Jan 06		anneal
+
+55221.          2010.025        	Jan 25		SIAF update, date is OPUS use-by-date (see section below for details)
+
+55231.8224537   2010.035 19:44:20	Feb 04		anneal
+
+55231.          2010.035        	Feb 04		SIAF update (quick fix to IR aperture positions; see SIAF note below)
+
+55257.9112037   2010.061 21:52:08	Mar 02		anneal
+
+55286.7413773   2010.090 17:47:35       Mar 31		anneal
+
+55309.		2010.113                Apr 23          SIAF updates (see section below for details)
+
+55316.6444329   2010.120 15:27:59	Apr 30		anneal
+
+55342.9526968   2010.146 22:51:53 	May 26          anneal
+
+55369.0861111	2010.173 07:04:00	Jun 22		first UVIS internal protected via automatic CSM=IR setting
+
+55369.9824652   2010.173 23:34:45	Jun 21		anneal
+
+55391.		2010.195		Jul 14		WFC3 SIAF updates (small corrections to matching apertures; see SIAF note below)
+
+55398.2774421	2010.202 06:39:31	Jul 21		anneal
+
+55428.3394097   2010.232 08:08:45       Aug 20          anneal
+
+55448.2770833	2010.252 06:39:00	Sep 09		SIC&DH lockup (signature the same as previous events). WFC3 detectors not warmed up.
+55448.943733    2010.252 22:38:59   	Sep 09		IDEBPWR2=Off  
+55449.135400    2010.253 03:14:59   	Sep 10		IDEBPWR2=On  
+55449.183780    2010.253 04:24:39   	Sep 10		IDEBPWR2=Off  
+55449.798016    2010.253 19:09:09   	Sep 10		IDEBPWR2=On  
+		
+55457.1582407   2010.261 03:47:52	Sep 18		anneal
+
+55470.0000000   2010.274  0:00:00	Oct 1		official start of Cycle 18
+
+55473.0715278   2010.277 01:43:00	Oct 04		Science data not being downlinked (details under Safing section).
+55473.7986111   2010.277 19:10:00	Oct 04		NSCC-1 halted; no data collected after this time.
+55474.5974537   2010.278 14:20:20	Oct 05		Intercept SMS commences.
+
+55484.5684838   2010.288 13:38:37       Oct 15          anneal
+
+55514.4012269   2010.318 09:37:46	Nov 14		anneal
+
+55539.5885417	2010.343 14:07:30	Dec  9		anneal
+
+---------------------------- 2011 ----------------------------------------
+MJD		day of year and time    month/day	activity	
+
+55568.2803704   2011.007  6:43:44	Jan  7          anneal
+
+55597.3917592   2011.036  9:24:08       Feb  5          anneal
+
+55623.6729282   2011.062 16:09:01	Mar 3		anneal
+
+55628.568969    2011.067 13:39:19   	Mar 8		IDEBPWR2=Off  (NSSC-1 BL9.2.0 installed, see ops note for more detail)
+55628.667812    2011.067 16:01:39   	Mar 8		IDEBPWR2=On  
+
+55650.6693403   2011.089 16:03:51 	Mar 30		anneal
+
+55679.2138310   2011.118 05:07:55 	Apr 28		anneal
+
+55707.5274653   2011.146 12:39:33       May 26	 	anneal
+
+55725.		2011.164		June 13		WFC3 SIAF updates (grism apertures, see SIAF note for more detail)
+
+55733.857976    2011.172 20:35:29   	June 21		IDEBPWR2=Off  (FSW update, see ops note for more detail)
+55733.882282    2011.172 21:10:29   	June 21		IDEBPWR2=On  
+
+55736.0882176   2011.175 02:07:02       June 24		anneal
+
+55746.		2011.185		July 4		earliest date for increase in  maximum number of images in a visit (see OPS note below)
+
+55763.7020833	2011.202 16:51:16	July 21		anneal
+
+55792.5278241   2011.231 12:40:04	Aug 19		anneal
+
+55822.2112731   2011.261 05:04:14 	Sep 18		anneal
+
+55831.4012963	2011.270 09:37:52	Sep 27		SIC&DH lockup; WFC3 did not warm up (see note under Safings)
+55831.401034    2011.270 09:37:29   	Sep 27		IDEBPWR2=Off  
+55831.579854    2011.270 13:54:59   	Sep 27		IDEBPWR2=On  
+
+55835.0000000	2011.274  0:00:00	Oct 1		official start of Cycle 19
+
+55849.2606366	2011.288 06:15:19 	Oct 15		anneal (first one from C19 proposal)
+
+55876.2928935   2011.315 07:01:46	Nov 11		anneal
+
+55900.9467361	2011.339 22:43:18	Dec 5		anneal
+
+---------------------------- 2012 --------------------------------------------
+MJD		day of year and time    month/day	activity	
+
+55930.9771296	2012.004 23:27:04 	Jan 4		anneal
+
+55961.6381134   2012.035 15:18:53       Feb 4           anneal
+
+55986.7184954	2012.060 17:14:38 	Feb 29		anneal
+
+56014.4987500   2012.088 11:58:12       Mar 28 		anneal
+
+56042.9284722	2012.116 22:17:00       Apr 25          anneal	IR no longer being warmed up (IR cold)
+
+56070.9777083   2012.144 23:27:54       May 23		anneal (IR cold)
+
+56080.5756944   2012.154 13:49:00	Jun 2		SIC&DH lockup (WFC3 not warmed up)
+
+56098.2945255   2012.172 07:04:07	Jun 20		anneal (IR cold)
+
+56125.4618866   2012.199 11:05:07	Jul 17 		anneal (IR cold)
+
+56154.6266898   2012.228 15:02:26	Aug 15		anneal (IR cold)
+
+56181.1939931   2012.255 04:39:21	Sep 11		anneal (IR cold)
+
+56211.7293981   2012.285 17:30:20	Oct 11		anneal (IR cold)
+
+56239.1244907   2012.313 02:59:16 	Nov 8		anneal (IR cold)
+
+56267.6903935   2012.341 16:34:10	Dec 6		anneal (IR cold)
+
+56284.05343750  2012.358 01:16:57	Dec 23		SWSP safemode (WFC3 not warmed up; see ops note for more detail)
+
+---------------------------- 2013 --------------------------------------------
+MJD             day of year and time    month/day       activity
+
+56293.6759606   2013.001 16:13:23 	Jan 1		anneal (IR cold)
+
+					Jan 24		secondary mirror move
+
+56323.1534838   2013.031 03:41:01	Jan 31		anneal (IR cold)
+
+56338.3414005   2013.046  8:11:37	Feb 15		SWSP safemode (WFC3 not warmed up; see ops note for more detail)
+
+56351.5332755   2013.059 12:47:55	Feb 28		anneal (IR cold)
+
+56377.5360995   2013.085 12:51:59	Mar 26		anneal (IR cold)
+
+56408.3147222   2013.116  7:33:12       Apr 26          anneal (IR cold)
+
+56434.8428009   2013.142 20:13:38	May 22		anneal (IR cold)
+
+56463.3884722   2013.171 09:19:24	Jun 20 		anneal (IR cold)
+
+56491.1732639	2013.199 04:09:30	Jul 18		anneal (IR cold)
+
+56508.7056829   2013.216 16:56:11	Aug 4		UVIS Amp A FIFO not empty (see ops note)
+
+56519.0907060   2013.227 02:10:37       Aug 15		anneal (IR cold)
+
+		2013.228 07:10		Aug 16		ESB kernel time rollover message (see ops note)
+
+56547.3061458	2013.255 07:20:51	Sep 12		anneal (IR cold); kernel time reset via cycling boot-to-operate + small voltage shifts in IR (see ops note)
+
+		2013.282 02:00:00	Oct  9		slight pressure spike (see ops note)
+
+56575.9754514   2013.283 23:24:39	Oct 10		anneal (IR cold)
+
+56606.0903819	2013.314 02:10:09	Nov 10		anneal (IR cold)
+
+56608.736805    2013.316 17:41          Nov 12		secondary mirror move (see ops note). 
+
+56630.6279167   2013.338 15:04:12 	Dec 04		anneal (IR cold)
+
+---------------------------- 2014 --------------------------------------------
+
+56659.3116435   2014.002 07:28:46       Jan 02 		anneal (IR cold)
+
+56687.4698727	2014.030 11:16:37 	Jan 30		anneal (IR cold)
+
+56710.		2014.053		Feb 22		flex lead failure in Gyro 5 (see ops note)
+
+56714.7534606   2014.057 18:04:59	Feb 26		anneal (IR cold)
+
+56723.4830903	2014.066 11:35:39	Mar  7		HST entered KFSP safemode, WFC3 did not warm up (Gyro 5 failed; see ops note)
+
+56744.1936806   2014.087  4:38:54	Mar 28		anneal (IR cold)
+
+56744.					~Mar 28		some enclosure & electronics boards cooler by ~1C (e.g. IENDEBT, IFITAT, IFITBT, IFITCT; see ops note).
+
+56770.8325000   2014.113 19:58:48 	Apr 23		anneal (IR cold)
+
+56797.8718634	2014.140 20:55:29	May 20		anneal (IR cold)
+
+56826.8071759   2014.169 19:22:20	Jun 18		anneal (IR cold)
+
+56853.7140856   2014.196 17:08:17 	Jul 15		anneal (IR cold)
+		
+		2014.209		Jul 28		slight pressure spike (see ops note)
+
+56882.3643056   2014.225 08:44:36 	Aug 13		anneal (IR cold)
+
+56911.6468403   2014.254 15:31:27	Sep 11		anneal (IR cold); kernel time reset via cycling boot-to-operate [any voltage shift?]
+
+56940.1990394	2014.283 04:46:37	Oct 10		anneal (IR cold)
+
+56950.7236111	2014.293 17:22:00	Oct 20		SIC&DH lockup (WFC3 not warmed up)
+
+56966.7313426	2014.309 17:33:08 	Nov  5		anneal (IR cold)
+
+56995.4799769   2014.338 11:31:10	Dec  4		anneal (IR cold)
+
+57022.7208218	2014.365 17:17:59 	Dec 31		anneal (IR cold)
+
+---------------------------- 2015 --------------------------------------------
+
+57051.3921875   2015.029 09:24:45 	Jan 29		anneal (IR cold)
+
+57058.          2015.036                Feb 5           HST secondary mirror move (3 steps, 1.78 micron)
+
+57081.1501505	2015.059 03:36:13	Feb 28		anneal (IR cold)
+
+57104.7101042	2015.082 17:02:33       Mar 23		anneal (IR cold)
+
+57134.8328704   2015.112 19:59:20 	Apr 22		anneal (IR cold)
+
+57162.4768056   2015.140 11:26:36       May 20		anneal (IR cold)
+
+57177.0826389   2015.155  1:59:00       Jun  4          HST safing, WFC3 not warmed up (see ops notes for details)
+
+57193.7204514   2015.171 17:17:27	Jun 20		anneal (IR cold)
+
+57218.8177778   2015.196 19:37:36 	Jul 15 		anneal (IR cold)
+
+57246.1666667   2015.224 04:00:00	Aug 12 		anneal (IR cold)
+
+57273.1903588   2015.251 04:34:07 	Sep 8		anneal (IR cold)
+
+57300.8533218   2015.278 20:28:47	Oct 5		anneal (IR cold)
+
+57330.0204051   2015.308 00:29:23       Nov 4		anneal (IR cold)
+
+57358.4235764   2015.336 10:09:57 	Dec 2		anneal (IR cold)
+
+57386.3034491   2015.364 07:16:58       Dec 30		anneal (IR cold)
+
+---------------------------- 2016 --------------------------------------------
+
+57412.7280556   2016.025 17:28:24 	Jan 25		anneal (IR cold)
+
+57440.5074421   2016.053 12:10:43 	Feb 22		anneal (IR cold)
+
+57471.4678241   2016.084 11:13:40       Mar 24          anneal (IR cold)
+
+57497.9671991   2016.110 23:12:46       Apr 19          anneal (IR cold)
+
+57529.4997338   2016.142 11:59:37       May 21          anneal (IR cold)
+
+                                    mid-May 		det.rad.temp (IDRIRT) had ground limit violation (see ops note)
+
+57554.6671644   2016.167 16:00:43	Jun 15		anneal (IR cold)
+
+57558.8527778   2016.171 20:20          Jun 20          STIS suspend (see ops note; WFC3 remained cold)
+
+		2016.192 		Jul 10		FIFO error for a dark image (see ops note)
+
+57582.1966551   2016.195 04:43:11	Jul 13		anneal (IR cold)
+
+57600.2493056   2016.213 05:59:00	Jul 31		SIC&DH lockup (kernel reset performed; WFC3 remained cold; see ops note)
+
+57612.1364815   2016.225 03:16:32       Aug 12          anneal (IR cold)
+
+57638.0870139   2016.251 02:05:18       Sep 7           anneal (IR cold)
+
+57669.6250000   2016.282 15:00:00       Oct 8           anneal (IR cold)
+
+57697.05689815  2016.310 01:21:56       Nov 5		anneal (IR cold)
+
+57722.30730324  2016.335 07:22:31	Nov 30		anneal (IR cold)
+
+57751.79717593  2016.364 19:07:56       Dec 29          anneal (IR cold)
+
+---------------------------- 2017 --------------------------------------------
+
+57766.70697917	2017.013 16:58:03	Jan 13		SIC&DH lockup (WFC3 remained cold; see ops note)
+
+57776.84442130  2017.023 20:15:58 	Jan 23          anneal (IR cold)
+
+57807.91949074  2017.054 22:04:04       Feb 23		anneal (IR cold)
+
+57828.36384259  2017.075 08:43:56       Mar 16          SIC&DH lockup (WFC3 remained cold; see ops note)
+
+57832.64872685  2017.079 15:34:10       Mar 20          anneal (IR cold)
+
+57862.63821759  2017.109 15:19:02       Apr 19		anneal (IR cold)
+
+57891.54908565  2017.138 13:10:41 	May 18		anneal (IR cold)
+
+57917.66216435  2017.164 15:53:31       Jun 13		anneal (IR cold)
+
+57924.1062500   2017.171 02:33:00       Jun 20		SIC&DH lockup (kernel reset performed [note from OLL]; WFC3 remained cold; see ops note)
+
+57948.9621181   2017.195 23:05:27       Jul 14		anneal (IR cold) 
+
+57975.3682755	2017.222 08:50:19       Aug 10          anneal (IR cold)
+
+57975.7493056   2017.222 17:59:00	Aug 10          COS/STIS safe; WFC3 in anneal & unaffected (details in ops note)
+
+58000.4618634   2017.247 11:05:05       Sep 04          anneal (IR cold)
+
+58030.4063889   2017.277  9:45:12       Oct 04		anneal (IR cold)
+
+58060.0067361   2017.307 00:09:42       Nov 03          anneal (IR cold)
+
+58085.9858565   2017.332 23:39:38       Nov 28          anneal (IR cold)
+
+58113.43512731  2017.360 10:26:35	Dec 26		anneal (IR cold)
+
+
+---------------------------- 2018 --------------------------------------------
+
+58137.86454861  2018.019 20:44:57       Jan 19		SIC&DH lockup (WFC3 remained cold; see ops note)
+58137           2018.019                Jan 19		NCS reported a jump in aft shroud pressure (see ops note)
+
+58143.95633102  2018.025 22:57:07       Jan 25          anneal (IR cold)               
+
+58170.78376157  2018.052 18:48:37	Feb 21		anneal (IR cold)
+
+58182.          2018.064                Mar 5           NCS aft shroud pressure gauge puff (see ops note)
+
+58201.36084491  2018.083 8:39:37	Mar 24          anneal (IR cold)
+
+                2018.092                Apr 2		longer SMS reacq/shorter FSW reacq/LOL (see ops note)
+                
+58228.182916667 2018.110 04:23:24       Apr 20          anneal (IR cold)
+
+ 
+58229.45118056  2018.111 10:49:42       Apr 21          KFSP mode after gyro 1 fails at 10:44 (see ops note)
+
+58257.74391204  2018.139 17:51:14       May 19          anneal (IR cold)
+
+58281.92674769  2018.163 22:14:31	Jun 12          anneal (IR cold)
+
+58312.61116898  2018.194 14:40:05       Jul 13          anneal (IR cold)
+
+58316.00000000  2018.198                Jul 17          HSTAR 15234 (lg V1 error; see ops note)
+
+58336.79021991  2018.218 18:57:55       Aug 06          anneal (IR cold)
+
+58358/58359	2018.240/241		Aug 28/29	string of GS failures (see ops note)
+
+58364.87758102  2018.246 21:03:43       Sep 03          anneal (IR cold)
+
+58367.          2018.249                Sep 06          NSSC & COS FSW installation; SI recovery @16:10 (see ops note)
+
+58392.48024306  2018.274 11:31:33       Oct 01		anneal (IR cold)
+
+                2018.278 22:02:19       Oct 05          G2 fails, G3 doesn't come up properly (see ops note); KFSP safe (WFC3 in operate)
+		2018.299                Oct 26          HST transitioned from KSFP to Normal mode
+
+58424.60978009  2018.306 14:38:05       Nov 02          anneal (IR cold)
+
+58451.45160880  2018.333 10:50:19       Nov 29          anneal (IR cold)
+
+58479.21076389  2018.361 05:03:30       Dec 27          anneal (IR cold)
+
+---------------------------- 2019 --------------------------------------------
+
+58491.72462963  2019.008 17:23:28	Jan 08          WFC3 suspends (CEB; see ops note)
+58500.13611111  2019.017 03:16:21       Jan 17          first WFC3 exposure after recovery from suspend
+
+58505.63520833  2019.022 15:14:42 	Jan 22		anneal (IR cold)
+
+58535.58949074  2019.052 14:08:52       Feb 21          anneal (IR cold)                                                                                                              
+58561.85943287  2019.078 20:37:35       Mar 19          anneal (IR cold)
+
+58590.47559028  2019.107 11:24:51       Apr 17          anneal (IR cold)
+
+58616.21189815  2019.133 05:05:08       May 13          anneal (IR cold)
+
+
+ http://www.stsci.edu/hst/wfc3/ins_performance/monitoring/UVIS/anneal.html
+
+NOTE: IDEB power off/on are listed as well. The state during SIC&DH
+lockups would need to be reviewed in detail as telemetry would not be
+valid until SIC&DH was recovered to normal mode. 
+
+
+Upcoming changes
+----------------
+
+Next anneals -  
+   13 May 2019  -  20 May 2019
+   10 Jun 2019  -  17 Jun 2019
+   8 Jul 2019  -  15 Jul 2019
+   5 Aug 2019  -  12 Aug 2019
+   2 Sep 2019  -  9 Sep 2019
+   30 Sep 2019  -  7 Oct 2019
+   28 Oct 2019  -  4 Nov 2019
+   25 Nov 2019  -  2 Dec 2019
+ 
+
+
+
+
+
+
+NOTE: anneal dates listed are taken from the "HST Observing Timeline
+Reports." Prior to April 2012, these times refer to the *end* of the
+hot phase of the anneal while April 2012 and later (with IR-cold),
+these times refer to the beginning of the hot phase of the anneal. In
+addition, the cooldown profiles are somewhat different before and after
+April 2012: before, cooling took ~6 hours (with ~3 hrs of that spent at
+~ -4C) while after, cooling takes ~3 hrs (no significant time at ~
+-4C).
