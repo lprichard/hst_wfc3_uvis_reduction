@@ -68,12 +68,13 @@ def make_path_dict(parent_dir, RED_DIR, CTE_CORR_DIR, CAL_DIR, IREF_DIR): #LP ad
     paths['history'] = os.path.join(paths['st_calib_dir'], 'history.txt')  
 
     # LP updated these paths to include inputs and changed function inputs
-    paths['masterdark_pool'] = RED_DIR + '/masterdarks/'
-    paths['plot_blvs'] = RED_DIR + '/plots/blvs/'
-    paths['plot_superdarks'] = RED_DIR + '/plots/superdarks/'
-    paths['daily_outputs'] = RED_DIR + '/automated_outputs/cal_uvis_make_darks/daily_outputs/'
+    paths['masterdark_pool'] = os.path.join(RED_DIR, 'masterdarks')
+    paths['superdark_pool'] = os.path.join(RED_DIR, 'superdarks')  #LP added this
+    paths['plot_blvs'] = os.path.join(RED_DIR, 'plots', 'blvs')
+    paths['plot_superdarks'] = os.path.join(RED_DIR, 'plots', 'superdarks')
+    paths['daily_outputs'] = os.path.join(RED_DIR, 'automated_outputs', 'cal_uvis_make_darks', 'daily_outputs')
     paths['ctecorr_dir'] = CTE_CORR_DIR
-    paths['tmp_dir'] = RED_DIR + '/tmp/'
+    paths['tmp_dir'] = os.path.join(RED_DIR, 'tmp')
 
     # Variable paths
     paths['main'] = parent_dir
@@ -114,6 +115,16 @@ def copy_masterdark(paths):
         The dictionary containing the absolute paths of directories
         used throughout the the pipeline.
     """
+
+    # LP added, check that directory actually exists, make the parent
+    if not os.path.exists(paths['masterdark_pool']): 
+        os.makedirs(paths['masterdark_pool'], 0o774)
+        print('\tLP log: Created directory {}'.format(paths['masterdark_pool']))
+
+    # LP added, check that directory actually exists, make the parent for superdarks (not copied here)
+    if not os.path.exists(paths['superdark_pool']): 
+        os.makedirs(paths['superdark_pool'], 0o774)
+        print('\tLP log: Created directory {}'.format(paths['superdark_pool']))
 
     masterdark = glob.glob(os.path.join(paths['masterdark_create_dir'], 'masterdark_*.fits'))
 

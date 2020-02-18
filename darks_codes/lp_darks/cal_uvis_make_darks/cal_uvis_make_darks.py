@@ -26,7 +26,7 @@ documentation of the individual functions/modules for further details.
 Execution of this script will create the following file tree:
 ::
 
-    post-anneal-<anneal_date>_<timestamp>/
+    post-anneal-<anneal_date>_procd-<timestamp>_<flags>/
         a/
             crrej/
                 crgrow/

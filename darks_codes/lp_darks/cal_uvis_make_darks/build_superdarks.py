@@ -564,9 +564,9 @@ def set_good_pixels(superdark, nfiles, fitpix):      #LP added fitpix
         print("")
         # Calculating the max no. hot pixels at the read out (ro), 
         # The total (ro_tot) and average (ro_avg) hot pixels per row
-        # For a chunk of 50 rows at either side (there are 2051 rows), 
-        # using the tested ST threshold, and the average number
-        # There are 2051 rows in ext1, sszie sets the number of rows to consider at a time
+        # For a chunk 50 rows: first rows of ext1, last rows of ext 4 (there are 2051 rows in each), 
+        # using the tested ST threshold, and the average number of hot pix per row
+        # There are 2051 rows in ext1, ssize sets the number of rows to consider at a time
         ssize=50    #This can be changed if required
         steps = np.arange(0, ext1.shape[0], ssize)
 

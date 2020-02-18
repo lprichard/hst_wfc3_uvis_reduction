@@ -9,7 +9,7 @@ product).
 
 Authors
 -------
-
+    Benjamin Kuhn, February 2020
     Matthew Bourque, April 2016
 
 Use
@@ -37,14 +37,13 @@ def remove_badpix_main(proc_dir):
         The absolute path of the directory to process.
     """
 
-    # LP edit, not the same directory now
-    # proc_dir_short = proc_dir.split('uvis_darks/')[-1]
+    proc_dir_short = proc_dir.split('uvis_darks/')[1]
 
-    print('')
-    print('')
-    print('')
-    print('---------- Removing non-cosmic ray flags for {} ----------'.format(proc_dir))   #removed proc_dir_short
-    print('')
+    logging.info('')
+    logging.info('')
+    logging.info('')
+    logging.info('---------- Removing non-cosmic ray flags for {} ----------'.format(proc_dir_short))
+    logging.info('')
 
     blvs = glob.glob(os.path.join(proc_dir, '*blv_tmp.fits'))
 
@@ -57,20 +56,21 @@ def remove_badpix_main(proc_dir):
             data_ext3 = hdulist[3].data
             data_ext6 = hdulist[6].data
 
-            # Set 256 pixels (saturated pixels) to 8192 to treat them as
-            # cosmic rays
-            data_ext3[np.where(data_ext3 == 256.0)] = 8192.0
-            data_ext6[np.where(data_ext6 == 256.0)] = 8192.0
+            # Find ALL saturated pixels and CR pixels
+            # Returns an array of 0's, 256's, 8192's, and 8448's
+            newdq3 = data_ext3 & (256 | 8192)
+            newdq6 = data_ext6 & (256 | 8192)
 
-            # Replace everything under 8192 (cosmmic ray) with 0
-            data_ext3[np.where((0.0 < data_ext3) & (data_ext3 < 8192.0))] = 0.0
-            data_ext6[np.where((0.0 < data_ext6) & (data_ext6 < 8192.0))] = 0.0
+            # Replace everything == 256 and greater than 8192 with 8192
+            # We're treating saturated pixels as CRs
+            newdq3[np.where((newdq3 == 256) | (newdq3 > 8192))] = 8192
+            newdq6[np.where((newdq6 == 256) | (newdq6 > 8192))] = 8192
 
-            # Reset everything above 8192 (cosmic ray + others) back to 8192
-            data_ext3[np.where(data_ext3 > 8192.0)] = 8192.0
-            data_ext6[np.where(data_ext6 > 8192.0)] = 8192.0
+            # Populated the 3rd and 6th extensions with new DQ array
+            hdulist[3].data = newdq3
+            hdulist[6].data = newdq6
 
             hdulist.close()
 
     else:
-        print('\tNo data for {}'.format(proc_dir))
+        logging.info('\tNo data for {}'.format(proc_dir))

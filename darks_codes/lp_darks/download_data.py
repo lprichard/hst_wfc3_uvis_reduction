@@ -18,7 +18,7 @@ For darks:
     Execution of this script will create the following file tree:
     ::
     <anneal_date:YYYYMMMDD>anneal_rawdarks_aquery<download_date:YYYYMMMDD>/
-        ctecorr_dark/
+        ctecorr_darks/
         mastDownload/HST/  (created by the astroquery download command)    
             id**/          (creates ID specific folders with the files in)
         raw_darks/
@@ -37,10 +37,11 @@ For science data:
     Execution of this script will create the following file tree:
     ::
     PID<proposal_id>_rawdata_aquery<download_date:YYYYMMMDD>/
-        ctecorr_sci/
+        ctecorr_sci/       (for CTE corrected data)
         mastDownload/HST/  (created by the astroquery download command)    
             id**/          (creates ID specific folders with the files in)
-        raw_sci/
+        raw_sci/           (for raw data copied from the download directory into a single directory)
+        calwf3_sci/        (for processing science data with new darks with calwf3)
 
 
 Authors
@@ -111,7 +112,7 @@ def copy_data(paths):
     os.chdir(paths['DLD_DIR'])
 
     # Copies data out of the astroquery sub-directories and into the RWD_DIR directory if empty
-    if os.listdir(paths['RWD_DIR']):
+    if glob.glob(os.path.join(paths['RWD_DIR'], '*.fits')):
         print('Directory not empty!! Not copying files')
     else:
         print('Copying downloaded raws from astroquery subdirectories {}'.format(paths['DLD_DIR']))
@@ -218,13 +219,14 @@ def make_dirs(dtype, raw_dir, download, dload_date, anneal_name, pid_name):
     if dtype=='dark':
         paths['ANN_DIR'] = os.path.join(paths['RAW_DIR'], anneal_name + 'anneal_rawdarks_aquery' + dload_date)
         paths['RWD_DIR']  = os.path.join(paths['ANN_DIR'], 'raw_darks')
-        paths['CTE_CORR_DIR'] = os.path.join(paths['ANN_DIR'], 'ctecorr_dark')
+        paths['CTE_CORR_DIR'] = os.path.join(paths['ANN_DIR'], 'ctecorr_darks')
         paths['DLD_DIR'] = os.path.join(paths['ANN_DIR'], 'mastDownload', 'HST')  #Naming convention from MAST, don't need to make DLD_DIR
     if dtype=='science':
         paths['PID_DIR'] = os.path.join(paths['RAW_DIR'], pid_name + '_rawdata_aquery' + dload_date)
         paths['RWD_DIR']  = os.path.join(paths['PID_DIR'], 'raw_sci')
         paths['CTE_CORR_DIR'] = os.path.join(paths['PID_DIR'], 'ctecorr_sci')
         paths['DLD_DIR'] = os.path.join(paths['PID_DIR'], 'mastDownload', 'HST')  #Naming convention from MAST, don't need to make DLD_DIR
+        paths['CW3_DIR'] = os.path.join(paths['PID_DIR'], 'calwf3_sci')
     
     # Making RAW_DIR if it doesn't exist
     if not os.path.exists(paths['RAW_DIR']): 
@@ -258,6 +260,9 @@ def make_dirs(dtype, raw_dir, download, dload_date, anneal_name, pid_name):
 
             os.mkdir(paths['CTE_CORR_DIR'], 0o774)
             print('Created CTE corrected science data directory: {}'.format(paths['CTE_CORR_DIR']))
+
+            os.mkdir(paths['CW3_DIR'], 0o774)
+            print('Created directory for processing science data with calwf3.e software: {}'.format(paths['CW3_DIR']))
 
     return paths
 
