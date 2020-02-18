@@ -1,4 +1,4 @@
-For information on this reduction package (https://github.com/lprichard/hst_wfc3_uvis_reduction.git) for Hubble Space Telescope (HST) Wide Field Camera 3 (WFC3)/UVIS data, open up the Jupyter Notebook darks_red_pack/darks_codes/lp_darks/darks_reduction.ipynb. Written by Laura Prichard, November 2019.
+For information on this reduction package (https://github.com/lprichard/hst_wfc3_uvis_reduction.git) for Hubble Space Telescope (HST) Wide Field Camera 3 (WFC3)/UVIS data, open up the Jupyter Notebook darks_codes/lp_darks/darks_reduction.ipynb. Written by Laura Prichard, November 2019.
 
 It contains information on:
 - what is in this pack
