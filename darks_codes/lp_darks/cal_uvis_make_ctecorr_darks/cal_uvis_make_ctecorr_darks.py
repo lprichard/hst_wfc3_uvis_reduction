@@ -99,7 +99,7 @@ def copy_dark_lp(src, dst):
     for filepath in glob.glob(os.path.join(src,'*')):
 
         # Getting just the filename
-        file = filepath.split('/')[-1]
+        file = os.path.basename(filepath)
 
         # If that file is raw, then check header
         if 'raw' in file:
