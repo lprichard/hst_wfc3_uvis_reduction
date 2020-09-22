@@ -144,15 +144,6 @@ def get_history_list(hist_type, paths):
     # Build anneal list
     hist_list = [result[0:9].decode() for result in grep_results]
     hist_list = [item for item in hist_list if item]
-
-    # LP: Added 19 Aug 2020 from C Martlin's updated version
-    # Remove anything from list that is not a float
-    for f in range(len(hist_list)):
-        try:
-            float(hist_list[f])
-        except:
-            hist_list.pop(f)
-
     hist_list = [(float(hist)) for hist in hist_list]
 
     return hist_list

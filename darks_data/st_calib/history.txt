@@ -437,6 +437,64 @@ MJD             day of year and time    month/day       activity
 
 58616.21189815  2019.133 05:05:08       May 13          anneal (IR cold)
 
+58645.61915509  2019.162 14:51:35	Jun 11		anneal (IR cold)
+
+58676.18376157  2019.193 04:24:37       Jul 12          anneal (IR cold)
+
+58694.25990740  2019.211 06:14:16       Jul 30          SIC&DH lockup (WFC3 remained cold; 1st use of CAROLInE; see ops note)
+
+58700.58082176  2019.217 13:56:23       Aug 5           anneal (IR cold)
+
+58730.313       2019.247 07:00:00       Sep 4           transition to gyro high mode 
+
+58730.76744213  2019.247 18:25:07       Sep 4		anneal (IR cold)
+
+58737.824       2019.254 19:47:00       Sep 11          transition back to gyro low mode
+
+58760.26537037  2019.277 06:22:08	Oct 4           anneal (IR cold)
+
+58787.71137731  2019.304 17:04:23       Oct 31          anneal (IR cold)
+
+58814.73461806  2019.331 17:37:51	Nov 27		anneal (IR cold)
+
+58821.10805556  2019.338 02:35:36	Dec 4           SIC&DH lockup (WFC3 remained cold; CAROLInE procedure used for 2nd time - recovery: 2019.338 12:49)
+
+58832.78146991  2019.349:18:45:19       Dec 15          SIC&DH lockup (WFC3 remained cold; CAROLInE procedure used for 3rd time - recovery: 2019.350:17:53:48)
+
+58836.61910880  2019.353 14:51:31	Dec 19		HST safed (KFSP), see ops note
+58837.79166667  2019.354 19:00:00	Dec 20		Science SMS start after HST recovered from safe mode
+
+58843.33828704  2019.360 08:07:08	Dec 26		anneal (IR cold)
+
+---------------------------- 2020 --------------------------------------------
+
+58868.64837963  2020.020 15:33:40       Jan 20		anneal (IR cold)
+
+58898.90377315	2020.050 21:41:26	Feb 19		anneal (IR cold)
+
+58927.66255787  2020.079 15:54:05       Mar 19		anneal (IR cold)
+
+58955.64424768  2020.107 15:27:43       Apr 16		anneal (IR cold)
+
+58985.13895833	2020.137 03:20:06	May 16		anneal (IR cold)
+
+58998.55069444  2020.150 13:13:00       May 29          FHST alignment tables updated
+
+59012.50511574  2020.164 12:07:22       Jun 12		anneal (IR cold)
+
+               ~2020.168 12:40:00	Jun 16		transition from 3-gyro to hybrid mode for testing
+               ~2020.175 14:00:00	Jun 23		transition from hybrid mode back to 3-gyro normal control mode
+	       
+	        2020.181 10:10, 22:06	Jun 29		HGA1/2 low body rate failure update (see ops note)
+
+59037.67686343  2020.189 16:14:41       Jul 7           anneal (IR cold)
+
+59066.82966435  2020.218 19:54:43       Aug 5		anneal (IR cold)
+
+59073.12291667  2020.225 02:57		Aug 12		SIC&DH lockup (WFC3 remained cold; CAROLInE used; est ~20 hr recovery)
+
+
+ 
 
  http://www.stsci.edu/hst/wfc3/ins_performance/monitoring/UVIS/anneal.html
 
@@ -449,14 +507,16 @@ Upcoming changes
 ----------------
 
 Next anneals -  
-   13 May 2019  -  20 May 2019
-   10 Jun 2019  -  17 Jun 2019
-   8 Jul 2019  -  15 Jul 2019
-   5 Aug 2019  -  12 Aug 2019
-   2 Sep 2019  -  9 Sep 2019
-   30 Sep 2019  -  7 Oct 2019
-   28 Oct 2019  -  4 Nov 2019
-   25 Nov 2019  -  2 Dec 2019
+   13-APR-2020 to 20-APR-2020
+   11-MAY-2020 to 18-MAY-2020
+   08-JUN-2020 to 15-JUN-2020
+   06-JUL-2020 to 13-JUL-2020
+   03-AUG-2020 to 10-AUG-2020
+   31-AUG-2020 to 07-SEP-2020
+   28-SEP-2020 to 05-OCT-2020
+   26-OCT-2020 to 02-NOV-2020
+   03-AUG-2020 to 10-AUG-2020
+
  
 
 
@@ -472,3 +532,1306 @@ addition, the cooldown profiles are somewhat different before and after
 April 2012: before, cooling took ~6 hours (with ~3 hrs of that spent at
 ~ -4C) while after, cooling takes ~3 hrs (no significant time at ~
 -4C).
+
+-------------------------------------------------------------------------------------------------------------
+
+Additional notes concerning SIAF changes, Operational changes, HST safings, and bowtie outliers
+
+
+-------------------------------------------------------------------------------------------------------------
+Details --- SIAF updates
+-------------------------------------------------------------------------------------------------------------
+More information available at SIAF history page (http://sesd.stsci.edu/prd/sciopsdb/siaf/siaf_install.htm)
+
+Jun 11,2012
+-----------
+WFC3 UVIS quad filter apertures changed from the geometric centers of
+the quadrants to the center of the unvignetted areas.
+
+
+Jun 13,2011
+-----------
+
+SIAF updates installed in SOGS 06/13/11: new apertures for use with IR
+grism science using full-frame and 512x512 & 256x256 subarrays (OPR
+66683).
+
+
+Jul 14, 2010
+------------
+
+WFC3 aperture updates installed into OPUS (SCIOPSDB PR 65493). These
+were small changes only (<1 mas), made to four matching apertures to
+make the IR and UVIS V2V3's match exactly otherwise, unnecessary SAM
+(small angle moves) were triggered. The matching apertures are designed
+to supply an effective SAME-POS while changing apertures between UVIS
+and IR. 
+
+Apr 23,2010
+-----------
+
+WFC3 aperture updates installed into OPUS (SCIOPS PR 64983). Twelve new
+apertures were defined: for quads (IUV1CA_2K2 IUV1CB_2K2 IUV2CC_2K2
+IUV2CD_2K2), for two 512x512 apertures on quadrant C (the new
+IUV2MC_512 and a shifted IUV2CC_512 [50 pix]), as well as two new 1Kx1K
+apertures in C as well (IUV2MC_1K1 and IUV2CC_1K1). In addition,
+there's a new aperture encompassing the full IR detector but which has
+its reference point at the same V2V3 position as IRFIX, named
+IUVISIRFIX. And, on the IR detector, there are three new apertures
+which align with the IR positions (IIRUVISCTR, IIRUVIS, IIRUVISFIX) for
+use by observers and one new aperture for use by APT only (IVTIRDEAD, a
+circular aperture showing the dead area ["death star"] on the IR
+detector. Finally, the positions of IUVISQA, IUVISQB, IUVISQC and
+IUVISQD have been moved to the center of the most blemish free areas.
+Note: names of these apertures follow the SIAF nomenclature; the phase
+II proposal instructions list the corresponding APT names.
+
+Feb 04, 2010
+------------
+
+Fix to SIAF installed on Jan 25,2010: sign error in V3 coordinate of IR
+apertures caused by ~1" error in their positions. 
+
+Jan 25,2010
+------------
+
+This delivery incorporates the distortion solution recently created by
+Vera Platais. This has been used in conjunction with the focal plane
+alignment measurement of December 2009 to obtain the best available
+reference point positions, scales and orientations. The new solution is
+4th order and so has 15 coefficients instead of 10 for each axis.
+Compared to the Aug 3 delivery, UVIS reference points have shifted by a
+few tenths of an arcsecond. The IR has moved by a little more than 1
+arcsecond. The recalculated angles differ by up to 0.2 degrees. No
+pixel positions have changed. 
+
+Aug 03,2009
+-----------
+
+                OLD           NEW 
+Aperture   X_ref  Y_ref  X_ref  Y_ref
+IIR         512    512    562    562
+IIRGRSM141  512    512    497    562
+IIRGRSM102  512    512    497    562
+IIR102REF   512    512    497    562
+IIR141REF   512    512    497    562
+IIRS64      512    512    522    522
+IIRS128     512    512    522    522
+IIRS256     512    512    522    522
+IIRS512     512    512    522    522
+        
+IUV2CC_512  282    257    332    257
+
+-------------------------------------------------------------------------------------------------------------
+Details --- Operations
+-------------------------------------------------------------------------------------------------------------
+Lock-ups since 2009
+2009 Jun 15
+2009 Oct 22
+2009 Nov 3
+2010 Sep 9
+2011 Sep 27
+2012 Jun 2
+2014 Oct 20
+2016 Jul 31
+2017 Jan 13
+2017 Mar 16
+2017 Jun 20
+2018 Jan 19
+2019 Jul 30
+2019 Dec 4
+2019 Dec 15
+2020 Aug 12
+
+
+Aug 12, 2020
+------------
+At 2020/225 02:57 a CU/SDF (SIC&DH) LOCK-up occurred. Error messages were received indicating the SI PIT Toggle Test and QBuf Transfer Status failed. MOSES SEs have confirm that this is a standard lockup event, and the HST Operations manager has given the go ahead to perform the CAROLInE expedited recovery activities. The FOT and MOSES SEs are going on-site to perform NSSC-I and SI those activities overnight, and P&S Ops has already generated and delivered the RTS Reload products. 
+
+The Lock-up was covered by HSTAR 16933.  The following Ops Requests were completed.
+−	21007/Complete   CU/SDF Lockup Recovery Part A, Recover SI C&DH to Fixed Format
+−	21008   CU/SDF Lockup Recovery Part B/C, Recover to SIC&DH Normal / SI Recovery 
+−	21009   CU/SDF Lockup Recovery Part D, Reload NSSC-1 GPTM 
+−	21011   CU/SDF Lockup Recovery Part E/F, Uplink NSSC-1 SPC Load and Set ATP (RTCS Restore method) / QBF Restoration
+−	21010  Configure ACS and WFC Mechanism for intercept
+−	20745    Restore ACS NSSC-1 Limit check Look_Up Table for ROA
+−	19682   -  Restore WFC3 CSM Motion Memory Monitoring
+The Science Timeline will resume at 2020.225:23:39:22  (7:30pm EDT Wed, i.e. planned resumption ~ 20 hours after event.
+
+
+
+June 29,2020
+------------
+
+HGA1 then later HGA2 moved suddenly, giving rise to  Low Body Rate failures at 181/10:10 and 181/22:06 and popping  gyros into high mode. FOT went on site to command the gyros back to low mode, clear the errors, and perform data and memory dumps.
+ 
+Initial analysis: HGA splines are stopping suddenly when the HGA positions reach the software limits unexpectedly. Small number statistics but both times happened on long splines for TDRS Spare. New SMSs will use TDRS East rather than TDRS Spare. The next spline that is expected to have this problem is from 20.182 06:28:51 to 20.182 10:19:17 UTC.  FOT will be on site to respond if needed.  At that time, the FOT will also execute commanding to update the TDRS East orbital elements in the HST486 and load the truncation SMS products.
+
+---> Turned out to be TDRSS spare ephemeris issue. PASS angle predictions vs FSW computations didn't agree and led to divide by zeros. Fix was to update the ephemeris on-board (it was 5 yrs old), it's working fine now. Going to update the other TDRSS ephemerii as well.
+
+
+
+
+May 29,2020
+-----------
+FHST alignment table updates
+
+Ops Request 20923 was successfully completed at 150/13:13 to update the FHST alignment tables.  The table loads were verified by comparison with memory dumps.  The first FHST map following the update resulted in a good attitude determination as expected.  Additionally, the first guide star acquisition following the update was successful. 
+
+Background
+After Dec 2019 FGS alignment update, average FGS roll bias shifted from ~0 to ~50 ". Confidence in FGS alignment was high so FHST misalignment in V1 was suspected. The high V1 error is currently more of an issue than in the past because of ACR 7 which trips on high roll bias errors in order to catch losses of lock during the vehicle offset. Action was then: update the FHST alignment tables to remove a +52.6" error in roll and a -3.4" " error in pitch (computed from FHST MAP data from 2019.324-2020.092); also a small but insignificant yaw error found: +0.13").
+
+
+
+Dec 19, 2019
+------------
+HST entered into KFSP mode at 353/14:51 - ACR 5 tripped (autonomous command routine)
+
+
+COS and STIS safed as expected. No other safing tests failed. Gyro performance has been stable thoughout anomaly.
+
+PCS showed the attitude difference between the command reference frame and the Kalman Filter calculated attitude was greater than 4 degrees for more than 12 minutes, causing ACR 5 to trip [NOTE: ACR 5 changed from 12 to 15 min on Dec 20,2019] .  The excursion occurred due to the combination of a relatively static mag field and a spacecraft slew.
+
+Excursions of this magnitude are not unusual, but the duration was longer than previously experienced. The spacecraft is in a safe configuration and there are no hardware issues that caused the safemode entry.  Given that, recovery to the nominal science timeline will begin this evening.
+ 
+The safemode recovery commanding will begin at 353/23:33 UTC
+STScI planning and scheduling is building a health and safety SMS that will begin at 354/0700 UTC.
+The Return to Science SMS will begin at 354/1900 UTC
+
+From Tom B.:
+At 9:51am EST yesterday, Hubble entered “Kalman Filter Sun Point” (KFSP) safe mode.  All systems were nominal at the time.  This mode puts the observatory into a safe state for troubleshooting significant problems.  The entry into KFSP was triggered by a safeguard that looks for a discrepancy between the commanded and measured vehicle attitude; in this case, it turned out to be a false alarm from a noisy measurement of the vehicle attitude during a slew. 
+ 
+After ensuring all systems (including the pointing control system) were behaving as expected, Hubble was returned to science operations this afternoon.  We are currently reviewing the autonomous command routine that safeguards against possible anomalies with the pointing control system so that we can reduce the chance of future false alarms while maintaining the safety of the observatory. 
+ 
+
+
+Dec 15, 2019
+------------
+On Sunday, December 15, at ~1:45 PM EST, the 15th Control Unit/Science Data Formatter
+(CU/SDF) lockup event occurred since its installation in SM4. At an anomaly telecon at 4:30 PM
+EST, status and recovery plans were reviewed. The criteria were met for use of the new Stored
+Program Command Timeline Reload Capability that reduces the time to resume the full science
+timeline by employing breakpoints built into the command load products. The reload SMS was
+delivered at 5:07 PM EST, and manual commanding to recover the payload was completed before
+midnight. Nominal science operations resumed at 12:53 PM EST on Monday, December 16, 2019.
+Use of the new Stored Program Command Timeline Reload Tool expedited recovery by ~14 hours.
+
+SIC&DH CU/SDF Lock-up event occurred at 349/18:45 (HSTAR 16272; see briefing charts CUSDF_Lockup_Anomaly_Briefing_121519.pptx). It was agreed to proceed with the recovery and planned intercept time of 2019.350:17:53:48.
+ 
+
+As of 2019/350/04:24 UTC, the third CU/SDF Lock-up recovery using the CAROLInE method has been successfully completed (reference HSTAR 16272). 
+ 
+The Lock-up recovery COP 9.21, Parts A, B, C, D, E, and F were executed via Ops Requests 20793-20796.  These Ops Requests contained commanding to restore SIC&DH command and telemetry function, recover the SIC&DH to Normal mode, recover the SIs to their nominal SMS boundary states, reload the NSSC-1 GPTM, load the NSSC-1 N00 Reload and Restart SPC loads, set the ATP pointer for intercept, and return to QBF operations. 
+ 
+Ops Request 20798 was successfully executed at 350/03:06 UTC to clear a NSSC-1 bad block count stemming from a period during an added MA forward support that dropped during the ESM recovery commanding.  Standing Generic Ops Request 20745 was completed at 349/23:07 UTC to restore the NSSC-1 patch to the ACS limit check look-up table to support ROA.  Standing Generic Ops Request 19682 to restore the WFC3 memory monitoring on the CSM motion was completed at 350/04:24 UTC. 
+ 
+During the recovery, at approximately 350/01:40 UTC, the J-string crashed (reference HSTAR 16276) resulting in a switch to the I-string for commanding, where the remainder of the recovery (Parts D, E, F, ORs 20798 and 19682) were completed after successfully transferring the RTCS Reload products to the string. 
+ 
+At this point, the Payload is ready to resume the on-going DOY 2019/350 SMS at the planned intercept point of 350/17:53:48 UTC.  Another FLASH report will be sent upon verification of successful resumption of the science timeline.
+ 
+ 
+
+Dec 4,2019
+----------
+At 2019/338:02:35:36 HST reported an SI C&DH CU/SDF Lockup. At the anomaly review, HST Mission Operations agreed to the use of the new CaroLine expedited recovery method. This method allows rapid recovery of the NSSC command processing without the need to intercept and build an SI recovery/Return to Science SMS. The supporting expedited recovery products were generated and delivered in short order following the anomaly meeting. If the realtime recovery activities are accomplished as planned, the NSSC-1 ATP pointer will be set to resume SI command processing at 2019.338/13:37:49 UTC (8:37:49am EDT) Wednesday. 
+
+As of 2019/338/12:49 UTC, the second CU/SDF Lock-up recovery using the CAROLInE method has been successfully completed.  Lock-up recovery COP 9.21, Parts D, E, and F were executed via Ops Requests 20780-0 and 20781-0.  These Ops Requests contained commanding to reload the NSSC-1 GPTM, load the NSSC-1 Restore (N00) and Restart SPC loads, set the ATP pointer for intercept, and return to QBF operations.  Standing Generic Ops Request 19682 to restore the WFC3 memory monitoring on the CSM motion was also completed at 338/12:53 UTC. 
+ 
+The Payload then successfully resumed the on-going DOY 2019/336 SMS at 338/13:37:49 UTC, returning to nominal science operations.
+ 
+It is worth noting that the recently installed SI Extended Checksum FSW patch releases for ACS, STIS, COS, and WFC3 were all serendipitously activated through the EEPROM to RAM copies performed in the respective instrument Boot to Operate transitions during the course of this recovery.
+ 
+
+
+Nov 2019 - SI Extended Checksum FSW Patch Install
+--------
+
+Rationale:  ACS Checksum failure due to EDAC RAM corruption (HSTARs 15619, 15688).
+
+A corrupted EEPROM copy to EDAC RAM caused a checksum failure during the post-anneal ACS Boot-to-Operate transition and resulted in ACS suspending during its February 2019 and March 2019 Anneal cycles. Near term ACS mitigation: Updated the EEPROM to EDAC RAM copy and subsequent checksum performed in the Boot-to-Operate transition to include all of EEPROM copied.
+
+Historically, this checksum only included the CS Operate code. Temporary modification to real-time and stored commanding transitions were implemented until an SOI update could be implemented in PRD to increase the number of words to checksum to include the code and patchable constants memory range.
+
+Subsequently SI FSW patch releases were developed to extend the checksum to include code and patchable constants memory for all SIs as the most robust approach to enhance monitoring for future EEPROM copy failures.
+
+Implementing flight software patch releases to extend the EDAC/EXEC RAM checksum ranges for each instrument:
+ACS CS 5.17A – JV0037 EEPROM  
+COS CS 4.19B – LV0062 EEPROM 
+STIS CS 5.02B – OV0012 EEPROM
+WFC3 CS 5.02A – IV0040 EEPROM
+
+Installed via 2019/329 SMS (Nov 25,2019) for each SI but activation will occur at the next Boot-to-Operate transition as dictated by on-orbit operations (e.g. instrument safing or suspend recovery).
+
+
+
+Jul 30,2019 - SIC&DH lockup
+-----------
+
+from Tom B. email to st_all:
+Ever since the last servicing mission, Hubble experiences an occasional lockup in the SIC&DH (Science Instrument Command & Data Handling unit), about once a year.  The last one was in January 2018.  The 13th SIC&DH lockup occurred last night at 2:30am EST.  The recovery from these lockups generally takes a day or so, depending upon the timing of the lockup relative to the mission timeline and contacts with the observatory.  With the normal recovery procedures, this particular event would have taken about 34 hours for recovery, just due to an unlucky alignment between the lockup and the timeline.
+
+This past spring, staff at STScI and GSFC developed and tested a new procedure for recovering from an SIC&DH lockup.  The traditional SIC&DH recovery procedure requires constructing new timelines in order to generate and redeliver the necessary memory layout, whereas the new process allows for using the memory layout of the existing timeline.  As a result, we were able to return to science today after 8 hours and 51 minutes, much faster than the previous record of 18 hours and 41 minutes set in the summer of 2016.  Many thanks to all of the staff at STScI and GSFC who worked so hard to return Hubble to science as quickly as possible.
+
+from MOSES report:
+First use of CAROLInE recovery method was successful  
+Recovery was complete in ~9 hours compared to nominal recovery of 24-36 hours
+
+The RTCS Reload product was provided by the STScI and uplinked
+The SI SEs identified the command pointer location to intercept the SMS timeline  
+The entire process was successfully completed by 211/14:12 UTC – resuming the on-going science timeline at 15:05 just under 9 hours after the initial Lock-up event
+
+(note: CAROLINE is the new procedure  CU/SDF Accelerated RTCS Ops Loads Initiative Enhancement)
+ie these are CU/SDF lockup anomalies within the SI C&DH
+
+
+Jan 8, 2019 - WFC3 suspends [recovered Jan 15, first image Jan 17]
+-----------
+From Tom B. email to st_all:
+"Yesterday [Jan 8] at 17:23 UTC, the Wide Field Camera 3 on HST suspended operations due to an apparent anomaly on the instrument's UVIS channel.  We are reviewing telemetry to isolate the issue..." 
+
+Jan 15,2019:  Analysis has shown ..anomaly was within the CCD Electronics Box (CEB) for the UVIS channel.  The analysis also demonstrated that it would be safe to reset the electronics and recover the instrument to an operational state, to see if these steps cleared the error.  These steps were performed this morning, with all telemetry values returned to normal.  To be clear, there was no need to switch the instrument to its redundant electronics.  The investigation will continue to determine the cause for the corrupted telemetry that triggered the suspension of operations last week; although the observatory was not passing through the South Atlantic Anomaly at the time of the anomaly, this event might have been triggered by something as simple as a cosmic ray.
+
+GSFC notes
+- 10 CEB analog telemetry itmes out-of-limits in error log
+- all of CEB telemetry in NED history buffer were affected
+- VSTIF testing on ACS ops bench, explore theory with CEB address FIFO & with WFC3 ops bench to validate exect of IBOOTOP3 (CEB/DEB turnons) in CCS STEP mode for recovery
+
+
+Oct 5, 2018 - G2 fails, G3 doesn't come up
+-----------
+
+During LOS at 22:02:19 low mode body rate test failed putting us in high mode, 22:03:42 2 Gyro test failed and entered KFSP, at 22:03:49. High mode body rate test failed. During LOS ACR fired twice for G2 being at stall current.
+
+from TB:
+..[A]t the time of the last servicing mission in 2009, HST had 6 functioning gyros: three with "standard" flex leads (G1, G2, & G5), and three with "enhanced" flex leads (G3, G4, & G6).  The latter are intended to mitigate a known failure mode of the gyros.  We expect the enhanced gyros to last approximately five times longer than the standard ones.
+
+Because the last of the standard gyros (G2) has now failed, we are running in a configuration where all of the gyros are enhanced (G3-G4-G6).  We will run in three-gyro mode until another gyro fails (currently expected to be in the early 2020s), at which point we will use the remaining two gyros in sequence (i.e., one gyro mode).  This strategy should preserve gyro capability through the 2020s.
+
+The silver lining here is that Gyro-2 has been misbehaving for about a year, with a higher jitter rate and sporadic periods of failed acquisitions.   There have been several occasions over the past year when we thought Gyro-2 was about to fail, and we have regularly discussed the possibility of proactively turning it off.  With the transition to the G3-G4-G6 configuration, we are hopeful that the performance of the observatory will return to historical norms, and the staff at STScI and GSFC should get a little relief from gyro babysitting.
+
+Follow-up from TB:
+we are in KFSP and will be for a while yet. Gyro 3 came up with an extremely high bias rate (saturating in low state and orders of magnitude higher than normal in high state).  We've tried toggling the state a couple times with no luck. There are some other things we can try, but for now we're standing down to investigate and ponder the options...
+[note: as of Oct 8, B3 hasn't been able to come up in stable state]
+
+NOTE: small changes in DEB & other temperatures due to switch in gyros, from 1,2,4 (RSU 1,2) to 2,4,6 (RSU 1,2,3)
+
+Gyro summary (see also gyro.txt in history/)
+ May 2018 gyro status
+  G   status	type		hrs       RGA  RSU/ECU  notes added later
+  G1  failed	standard	43000	  1    1	failed 2018/111
+  G2  On	standard	43000	  1    1
+  G3  Off	enhanced	22000	  2    2
+  G4  On	enhanced	88000	  2    2
+  G5  Failed	standard	51000	  3    3	failed 2014/066
+  G6  On	enhanced	36000	  3    3
+
+  Apr 2019 gyro status
+  Gyro     Status	Type	Hours (8/18)
+   G1	   Failed	Standard      43359
+   G2	   Failed	Standard      45224
+   G3	   On / Issues	Enhanced      22353
+   G4	   On 		Enhanced      90521
+   G5	   Failed	Standard      51497
+   G6	   On		Enhanced      37635
+
+
+  Apr 2020 gyro status
+  Gyro     Status		Type	   Hours (3/31/2020)
+   G1	   Failed  4/2018	Standard      43359
+   G2	   Failed 10/2018	Standard      47550
+   G3	   On / Issues		Enhanced      35383
+   G4	   On 			Enhanced     105881
+   G5	   Failed 3/2014	Standard      51497
+   G6	   On			Enhanced      52995
+  
+
+  Gyro configuration history
+  dates		        gyros	RSUs
+  2009/131 - 2009/136	1,6,4	1,2,3
+  2009/136 - 2009/175	3,4,5,6 2,3
+  2009/175 - 2009/177	4,5,6	2,3
+  2009/177 - 2011/077	3,4,5	2,3
+  2011/077 - 2014/066	6,4,5	2,3
+  2014/066 - 2018/112	1,2,4	1,2       
+  2018/112+  		2,4,6	1,2,3
+
+Aug 28/29,2018 - string GS/reacq failures
+--------------
+
+Combination of large gyro-2 bias shifts, spoiler stars in the FGS field of view, and a failed FHST map resulted in 3 GS acq and four reacq failures. Real Time commanding uplinked the Gyro Rate Bias estimate and commanded OBAD (On-Board Attitude Determination) with an attitude correction.
+
+More mitigation to reduce number of gyro-2 failures to RGA mode: use HST486 Autonomous Commanding Routine (ACR), does not require FSW. HST 486 uses ACRs to monitor combinations of software (S/W) and hardware (H/W) data and to perform a predefined command macro if the data remains out of limits for a specified period of time. 
+
+
+
+
+Sep 6, 2018 -COS LV0061 & NSSC-1 9.4 FSW installation
+-----------
+
+Install/activate COS Flight Software version CS 4.19a /EEPROM LV0061, which includes CS 4.19/LV0060 updates.
+Install/activate NSSC-1 Flight Software 9.4.0, which includes 9.3.0, 9.3.1, and 9.3.2 updates.
+
+COS FSW updates: expand number of central wavelengths in OSM table, update focus values to enable new FUV settings at lifetime position 4.
+
+NSSC-1 updates: close all outstanding deficiences in FSW & remove need to maintain 2 FSW versions (one in 486 memory and the latest FSW version).
+
+Timeline 
+   Activity start time 248/12:20 UTC (September 5, 8:20 am EDT)
+   COS Flight Software Installation @ 248/12:20
+   Begin loading NSSC-1 Image @ 248/13:14
+   SI science activities ends by 249/14:35:00  i.e. NSSC-1 science commanding halted
+   Halt NSSC-1 ATP and begin transition to fixed format and SI Pseudo-Boot states @ 249/14:45
+   Begin recovery of SIs @ 249/16:10
+   Load SPC memory and set ATP at 249/19:00         NSCC-1 science commanding resumed @ 249/22:35
+   
+
+Note: SI downtime placed to allow STIS/FUV visits to occur:
+   146361Z – 250:04:59 – STIS/FUV Support for the Juno spacecraft perijove 15
+   1542429 – 250:06:35 – STIS/FUV Europa observations
+
+
+
+July 17, 2018 recentering loss-of-lock
+-------------
+
+Large V1 error introduced due to a [gyro-induced] V2 disturbance resulted in re-centering loss-of-lock. On June 12, 2018 thresholds for entering recentering for Vehicle Control Law Position Path were changed (to less GS failures due to increased jitter):
+V1 from 200 to 400 masec
+V2 left at 20masec
+V3 from 20 to 80 masec
+
+However recentering is currently not needed to address vehicle disturbances and is contributing to losses of lock so disabling will improve science efficiency. Lack of recentering events should lead to fewer losses of lock.
+
+That is, the recentering logic was initially put in place to allow the FGS units to hold lock during SA disturbances by opening the loop temporarily. These disturbances are no longer seen with SA3 and teh recentering logic is now causing problems. Recentering is being entered during V2 disturbances and the FGS units lose lock because of failing to track motion during that time. This is especially true with the current motion from Gyro 2 instability.
+
+More information from OLL:
+-	July 13 – Large Attitude Error Event Summary: ~18 deg/hr rate bias in both V2 and V3 was erroneously produced when the FGS acquisition expire timer terminated the Re-acquisition at the same time that the Attitude Observer Initialization (AOI) process was collecting FGS data for initializing the attitude observer.  
+o	large rate bias tripped the Low Mode Body Rate Safing Test which in turn initiated the commanding to place the Gyros in High Mode. 
+o	Attitude error increased to 42 degrees. HST remained power positive; telemetry was recovered by RT commanding using the low gain antennas. 
+o	Following real time commands to update the onboard “commanded” quaternion, the team commanded HST to SMS attitude.  
+o	Science ops resumed approximately 5 hours after the anomaly. 
+-	To prevent re-occurrence of the anomaly, FGS acquisition logic will be modified. Modifications include disabling the AOI processing prior to terminating the FGS re-acq.  Acq Logic-I will be uplinked later in August (Ops Brief on Monday Aug 6 @ 1:30PM)
+-	A process in the FGS Acquisition Logic that was put in place years ago facilitate the FGSs in holding fine lock during Solar Array Disturbances (called Re-centering logic) now has a deleterious effect in this era of large G2-induced disturbances. The re-centering logic was disabled on July 20.
+-	The Acquisition failure rates have been dramatically reduced by the mitigations (increasing the sampling frequency (reduce sampling rate from 50ms to 25ms) and adding OBADs in front of re-acqs).
+o	Latest Stats (From Mike Wenz) – for week of July 23:  failure rate to RGA Hold was 2.63%;
+total failure rate was 5.26%. The number of failures to Independent RGA hold was 2. 
+
+
+
+
+Apr 21, 2018 - +V3 KFSP mode after Gyro 1 fail
+------------
+
+Kalman Filter Sun Point (KFSP) Safe Mode -- Sun point control law using combination of CSS, MSS, and any number of gyros.  Faster Sun capture. Aperture Door remains open.
+
+Gyro 1 motor current dropped to 0 at 2018/111 10:44, indicating flex lead B failure. HST enters KFSP mode when system momentum check failed at 2018/111 10:49:42.
+
+Based on anomaly briefing: Gyro 1 will not be powered on 1) flex lead failure is understood, gyro will not successfully restart with only 1 flex lead and 2) do not want to disturb Gyro 2 (given its recent issues)
+
+SI's had nominal safemode response. WFC3 remained in Operate (IR Hold), had just completed science data dump so no images in the buffer, anneal was performed the day before.
+
+Gyros 6 and 5 have been powered on in preparation for a new operational configuration of 2-4-6-3.
+
+Ops Request 20220 was executed and recovery from KFSP is complete.
+Gyro temperatures have stabilized and gyro 6 is running nominally.
+The health and safety SMS began executing at 112/0000.
+
+Details from T.Brown:
+Around 8am local time on Saturday morning, Gyro-1 on Hubble suffered a failure and the spacecraft entered safemode.  We have powered on Gyro-6.  It needs to warm up for about 24 hours, after which we can start phasing in normal activities as we recover the observatory.
+
+At the time of the last servicing mission in 2009, HST had 6 functioning gyros: three with "standard" flex leads, and three with "enhanced" flex leads, with the latter intended to mitigate a known failure mode of the gyros.  We expect the enhanced gyros to last approximately five times longer than the standard ones.
+
+Before this morning's failure of Gyro-1, we had the following gyros:
+
+Gyro	Status	Type		Hours
+G1		On		Standard		43000
+G2		On		Standard		43000
+G3		Off		Enhanced	22000
+G4		On		Enhanced	88000
+G5		Failed	Standard		51000
+G6		Off		Enhanced	36000
+
+With the failure, we are changing from gyros 1-2-4 to gyros 2-4-6.  Gyro-2 has been showing signs of degradation for the past year, and when it fails, we will start Gyro-3.  At that point, we will be operating on three enhanced gyros. Although we expect those gyros to last for years, if one eventually fails, we will use the last two gyros sequentially, running one at a time, with some degradation in HST performance, but maximizing the lifetime of this unique and powerful observatory.  We expect HST to continue pursuing amazing science into the mid-2020s, providing significant overlap with the JWST mission.  
+
+As always, we are grateful to all of the staff at STScI and GSFC who work so hard to keep the observatory safe and return to science as soon as possible when these anomalies occur.
+
+ 
+
+
+Apr 2,2018 - reacq timing changes
+-----------
+
+In response to the recent increase in Take Data Late (TDF) cases for FGS reacquisition, two changes are being made as recommended by the GSAWG. One is the STScI has changed their timing starting with 18 reacquisitions in next week’s SMS to allow an extra 20 seconds. The change is expected to be for all reacquisitions in future SMSs. The other change is in the FSW On-Board Reacquisition/Loss of Lock to shorten the timing by 15 seconds.
+We would like to hold an Operations Briefing for the FSW Timing change on Monday, 3/26/18 from 3:30 – 4:30 PM in B3/S107A. Commanding is anticipated to be Wednesday morning.
+
+From flight systems engineering report:
+In an effort to mitigate the Reacquisition late TDF problems that we were experiencing from the Gyro 2 bias issues, the GSAWG approved two changes that have been implemented on orbit.
+Starting with the 2018.092 SMS (April 2), STScI modified reacquisition durations to include an additional 20 seconds before SI observing, increasing the start-to-end time for pair Reacquisitions from 266 to 286 seconds. 
+On March 28 a FSW patch was executed per Ops Request 20204 to change the wait time prior to the Science Initialization command from 40 seconds to 25 seconds for reacquisitions.
+This will cause the TDF to come up 15 seconds earlier in the Reacquisition logic than before.
+Since these adjustments, there have not been any Reacquisition late TDF issues not attributable to star problems, though there have been cases that would have been late if these mitigations had not been put into place. 
+
+
+
+Mar 5,2018 - HST aft shroud pressure puff
+----------
+
+NCS/ASCS ESM TPS puff observed (see 180305*jpg)
+
+Note from Chris L.:
+Another “puff” was detected by the NCS aft shroud pressure gauge earlier this week. I do not have any insight into the source but it should be appreciated that this ion pump (it is a pump, not a true gauge) is way past its end-of-life. If the pressure calibration is correct and this pump was being operated on the ground it would have long ago depleted its consumable supply of titanium. Why it continues to operate has not been explained but perhaps the actual pressure is lower than reported or there are zero-gravity effects that have not been appreciated. In any case I’ve never seen a pump operated to titanium exhaustion because on the ground sputtering products cause the pumps to fail prior to reaching this level of usage. So while I have no evidence that the age of the pump could generate such “puff” readings I thought I’d take this moment to remind the community that we are in uncharted territory with this device.
+
+
+
+Jan 19 2018 - SIC&DH lockup
+-----------
+
+Note from Tom B.:
+Late on Friday afternoon, the SIC&DH (Science Instrument Command & Data Handling unit) on HST experienced its 12th lockup since Servicing Mission 4.  The flight and science operations staff at GSFC and STScI responded quickly, and we returned to science late this afternoon. 
+
+As a followup to last week's message, Solid State Recorder 3 (SSR3) continues to function well, and was returned to science operations alongside SSR1 on Tuesday.
+
+On the same day, the NCS pressure gauge reported a jump in aft shroud pressure from a background level of 9x10-8 to 1.8x10-7 Torr. The “puff” resolved over several minutes (see *puff.jpg). The system is not operating (warm) but stable with the exception of circulator loop gas leakage slowly causing loop depressurization.
+
+
+
+Oct 2017 - Gyro 2 issues
+--------
+
+- First event on Oct 15: large gyro bias (254 as/hr) change, 1 GS acq failure
+- Oct 19: rotor restriction (168 to 212 mA) and stall event at 11:42, 13:30
+  restriction caused loss of lock & subsequent GS reacq failure
+  stall casued Momentum & Low Mode counters to increment, body rate test failed, enters high mode
+        triggered running of restart ACR (powers gyro off then restarts before spins down)
+        motor current successfully restored
+	---> without ACR, would have gone into KFSP sunpoint safe
+        resulting bias shift (-350 as/hr) & high mode cause loss of lock, 3 GS reacq & 1 GS acq failures
+- if continues: will reconfigure to 1-4-6-2 (2 in shadow mode)
+  will further protect against safe mode
+
+
+Aug 10,2017 - real-time proc error safes COS/STIS; WFC3 unaffected
+------------------------------------------------------------------
+Summary: On August 10, NSSC-1 reached the SPC list exhaust and safed COS and STIS at 222/17:59 (HSTAR 14808)
+QBF transfers were disabled to complete the commanding to dump the NSSC-1 memory, but they were not re-enabled.
+To expedite recovery, the decision was made to restore and configure the SIs in real-time rather than wait for an intercept SMS. 
+Recovery was completed in about half the time of a typical recovery, and WFC3 and ACS were able to resume science in just a few hours (WFC3 was in anneal, commanding picked up before cooldown ie no effect to WFC3)
+The instruments were recovered and the timeline resumed by 223/06:18
+
+In more detail:=
+At ~22/17:59, an ESB was received indicating that the QBF transfer had failed.  This resulted in list exhaust being reached in the NSSC-1 SMS, causing COS and STIS to safe.  The NSSC-1 remained in normal mode and WFC3 and ACS remained in operate.  There is no currently running SMS in the NSSC-1.
+ 
+The SI SE team is developing ops requests to set the ATP pointer to resume the science timeline for WFC3 and ACS, with the intention of recovering COS and STIS in real time. 
+
+The QBF transfer failure was confirmed to be the result of the QBF transfers not being re-enabled following the commanding at about 222/14:14.
+ 
+In the forward at 222/20:25, Ops Requests 20095 and 20097 were executed to uplink the NSSC-I SPC loads, set the NSSC-I ATP, and re-enable QBF transfers.
+This was executed in time to allow the WFC3 anneal commanding to continue uninterrupted.  Ops Request 20098 will be executed in the next forward support to
+close the ACS calibration door.  A meeting will be held at 5:30 PM local time on the anomaly line to review the commanding for recovery of STIS and COS later this evening.
+The timing for the recoveries will be posted on SAS after the meeting.  A flash report will be issued when both instruments have been recovered.
+ 
+HSTAR 14808 has been generated to cover this event.
+  
+COS and STIS entered their safe states this afternoon at ~222/17:59UT (1:59pm EDT). The root cause was a real-time procedural error which prevented the next expected command load from being transferred into the NSSC memory for execution. This resulted in a NSSC-1 command list exhaust and that triggered the resulting instrument safings. The 486 computer and command timeline were not affected and continued to execute the SMS generated spacecraft command load. After engineering analysis and a project briefing, the decision was made to manually load the current expected command load into NSSC-1 memory and reset the ATP (Absolute Time Processor) to resume WFC3 and ACS SMS command execution as soon as practical. That was possible because WFC3 and ACS were and remained in their default operate state throughout the event. That load and ATP pointer reset activity was successfully executed at ~222/20:25UT (4:25pm EDT), and WFC3 and ACS SMS command execution have been subsequently verified.  
+
+HST Operations and Project management also gave the go-ahead to recover COS and STIS in realtime later this evening and tonight. COS recovery activities will begin around day 223/01:46UT (9:46pm EDT), with STIS recovery commanding to begin around 223/04:35 (12:30pm tonight). All recovery activities should be completed will before their next use in the SMS later tomorrow morning.
+
+Note added later: recovery went as planned, thanks to the rapid and expert response of the flight SE and ME’s, with support from our STScI engineers, we expect that only 4 prime GO orbits, 2 SNAPs, and 3 calibration parallels will have been impacted by this event.
+
+
+
+Jun 20,2017 - SI C&DH lockup (WFC3 remained cold)
+--------------------------------------------------
+
+At 171/02:34 the SSM486 reported the SIC&DH Toggle Test had failed.  At 171/02:36,  the alert system sent out the message Identifying the cause as a CU/SDF Lock-up event.  This is the 11th Lock-up event seen since the unit was installed in SM-4. The last lock-up was on 3/16/2017.
+ 
+Prior to the CU/SDF lockup, nominal NSSC-1 and HST486 SMS timelines were executing. 
+Lock-up occurred at 171/02:33 UTC.
+
+The intercept SMS to truncate the current week’s SMS is expected to be delivered ~1200 UTC (8am) and will begin at 1600 UTC.  The return to science SMS will be delivered ~22 UTC  and will begin at 172/0200 UTC.
+
+
+Mar 16, 2017 - SI C&DH lockup (WFC3 remained cold)
+--------------------------------------------------
+At AOS, HST reported an SIC&DH Lockup event that occurred at 75/08:43:56.  The 486 SMS commanding is continuing with no NSSC-1 SMS.  Response matches past events. 
+
+Following the CU/SDF lockup anomaly at 075/08:42, the SI subsystem has been recovered successfully.  The SI C&DH is in Normal mode and all the science instruments have been recovered to their nominal intercept states.  In addition, all instruments and the SI C&DH telemetry appear nominal following the recovery commanding.    
+ 
+The above activities were executed via Ops Requests 20027, 20028. The NSSC-1 GPTM table will be loaded and dumped via Ops Request 20029.
+ 
+The SI subsystem is now in the proper configuration for the intercept SMS.  The Health and Safety SMS was delivered this evening around 1:15pm local time and the Return to Science SMS will be delivered around 5:30 pm.  Afterwards, SI SEs, FOT, and NOM will remain onsite to process and load the science SMS.
+ 
+At 075/05:11 UTC,  Return to Science SMS was successfully intercepted. The NSSC1 ATP started to increment and everything has been working nominally. Nominal science operations have already resumed with WFC3 observations beginning at 075/05:21:15 UTC.
+
+
+Jan 13, 2017 - SI C&DH lockup (WFC3 remained cold)
+--------------------------------------------------
+SI C&DH lockup occurred Fri, Jan 13, 2017 16:58:02. HST was in LOS at the time. All telemetry at AOS was nominal for other subsystems. The SI system indicated the expected lockup response. Nominal recovery began at 19:20 UTC. SI SEs will continue executing OPS requests this evening. H&S SMS will be delivered ~7:30pm EST and being 014 10:30 UTC. Return to science SMS will be delivered ~9:30pm EST to start ~014 17:30 UTC. An additional SMS will be delivered later to replace the 016 SMS>
+
+
+Jul 31,2016 - SI C&DH lockup / WFC3 kernel reset performed (no longer needed in Sep)
+------------------------------------------------------------------------------------
+
+SI C&DH lockup occurred Sun, Jul 31, 213/05:59 UT, and as a result HST safed. As before, no communication with SIs until fixed. Cause unknown, no obvious fix except to power-cycle SI C&DH. First one of these for WFC3: June 2009, ~1/yr (3 in 09 & none in 2013, 2015).
+ 
+Nominal recovery time of 214/00:00:00 UT. First post-safing exposures for each instrument/detector
+WFC3 UVIS 214:00:13:19
+...
+Event was similar to previous lockups. Recovery occurred by 214:00:00 ie in ~19 hrs, a record! WFC3 did not warm up; bowtie exposures after WFC3 was brought back up were nominal.
+
+Two HSTARs have been written to document this morning’s events.  HSTAR 14576 covers the CU/SDF Lock-up, while HSTAR 14577 covers a correction to a verifier in COP 9.21 noted during the course of the recovery. 
+
+
+Jul 10,2016 - FIFO error on dark image
+--------------------------------------
+
+HSTAR 14562 file: UVIS FIFO not empty at end of readout on 192/0136Z. 
+Program affected: 14370, prog D0K, obset 12, dark-nm, F390M.
+SMS 2016.192:01:17.28. QL reports no obvious degradation of science data.
+
+
+
+Jun 20,2016 - STIS suspend
+--------------------------
+
+Summary from Scott Swain:
+At 2016/171:20:2801 UTC (4:28 pm EDT), the NSSC-1 posted a STIS 104 status buffer message, parameter ‘62’O (50 dec) indicating that the instrument Suspended due to a Control Section reset resulting from an Intel page fault exception.   Shortly after receipt and the initial engineering diagnosis and response, a status meeting was arranged for 6:30 pm EDT to review all the findings to date and the forward plan.  Charts are posted on the Systems Management website at:  https://edocs.hst.nasa.gov/hstsysman/Briefings/AnomalyBrief/STISsuspend_19June16.pptx
+ 
+A brief summary of the discussion follows:
+ 
+Upon review of the events leading up to and at the time of the Suspend, the vehicle was known to be in a deep (L1 or L2) SAA passage, during orbit day, and quiescent from the perspective of STIS and entire Payload.  Other subsystems reported nothing unusual in their telemetry.  A review of STIS telemetry around the event is on-going, but is not expected to reveal any issues.
+ 
+The on-call FOT, SI SE, ARM, and CMOM reported to GSFC and successfully completed Ops Request 19928 at 171/22:14 UTC (6:14 pm EDT) to execute ROP NS-10, dumping STIS memory following a Suspend.  Resulting Exec RAM, EEPROM, and CS Buffer RAM files were provided to Payload FSW for analysis.  Initial results of this analysis show the reason for reset as an Intel page fault exception, confirming the error parameter of ‘62’O (50 dec) reported in the status buffer.  No other items of interest were noted in the error log or other areas.  Results of the full analysis are forthcoming, but, again, are not expected to reveal any other issues. 
+ 
+This Suspend event is likely to be the result of a Single Event Upset (SEU)-induced error.  Other instruments have suffered other flavors of Intel exceptions in the past, including both NICMOS and ACS.  It is recommended that the instrument may simply be recovered nominally and returned to science operations shortly thereafter after stabilization. 
+ 
+The forward plan portion of the status meeting was led primarily by the STScI.  STIS is being heavily utilized towards the front of the imminent DOY 2016/172 SMS, limiting recovery possibilities tonight and well into tomorrow.  The best option for recovery is expected to be via stored commanding in an intercept SMS later in the week.  Several JUNO support visits are the driving factor in completion of the recovery prior to approximately DOY 174/05:00 UTC.  The STScI will be working on a support schedule for the replan and will likely work towards delivery of products tomorrow afternoon or early evening. 
+ 
+A tag-up on the telemetry and FSW analysis results to date, as well as the forward plan for recovery and resumption of STIS science will be held at 9:00 am EDT Monday morning, 20 June, following the morning status briefing. 
+ 
+  
+
+
+
+May 9,2016 - WFC3 thermal low-limit violation
+---------------------------------------------
+
+WFC3 radiator hit end of calcurve at -55 C, determined to be due to particularly cold attitude maintained for extended period of time (HSTR 14531). Cal curve gets coarse quickly < -55 but can be taken down to -80 (constraint is -70 as ammonia in heat pipes freezes at -77C). Raw counts indicate probably wasn't much below -56 C. Heaters are powered directly from PDU, located on spreader heat pipes so heat can dissipate across radiator as evenly as possible. Those setpoints are controlled by fixed thermostats, characteriszed during TV2 (results in SE-02 Table 4.2.1.2). They were spec'd to have -50C setpoints with 3.5C deadband, found to activate at  -51.3C, -53.65C, -55.98C, and -52.8C. The fact that the raw counts show that it didn’t get colder than -56C for IDRIRT lends credibility to that heater having come on at -56C like we saw in TV2 (there is no telemetry on these heaters). SI SE's looking into extending curve & reset ground limit to -60C. WFC3 should never get there but if it does, would mean probably heater is failing or attitude is off-nominal for longer than heater can manage (requiring pointing constraints).
+
+ 
+Oct 2015: gyro 4 showing large bias shifts
+------------------------------------------
+
+Gyro 4 has had another large bias shift this morning between about
+7-8am.  Previously, the rate of change of the bias shift was fairly
+short (an orbit or two).  Currently, the rate of change of the bias
+shift is still fairly large, but so far is decreasing with time.  So
+far, we have lost no science observations due to this latest G4 issue. 
+
+However, we have one of the Benneki exoplanet observations, 13665 visit
+02, coming up at about 2am EDT Saturday morning and running for 4
+orbits.  This observation will put us in a situation where we would not
+be able to get an autonomous gyro bias update for about 8 hours.  With
+this latest G4 issue, that will likely cause problems without
+intervention. The autonomous gyro bias updates are performed by the 486
+when the spacecraft is under FGS-pair guiding and no maneuvers are
+being performed.  If a minimum of 20 minutes during the visibility meet
+these conditions, that data is used to perform the gyro bias update
+prior to the termination of FGS guiding.  
+
+The plan is to uplink a change at about 4:50pm to modify the onboard
+value from 20 minutes to 5 minutes.  This should allow for the
+autonomous gyro bias updates to occur during the 4 orbit Benneki visit
+and the system to take care of itself without further intervention.
+However, if there wind up still being problems with the Benneki visit,
+the FOT is poised to come in at 6am tomorrow morning to perform a
+manual gyro bias update to hopefully allow the following visit's GSACQ
+to succeed (3-orbit 13801 visit 08). Since this change to the minimum
+data collection interval will have no effect on most orbits (we usually
+collect 30+ minutes per orbit), the long-term plan is to leave the
+updated 5 minute minimum in place until Gyro 4 dies.
+
+Gyro 4.s motor still remains high at approximately 180 milliamps as
+compared with the nominal motor current of approximately 130 milliamps.
+This has the signature of a non-destructive .lube patch. that
+temporarily increases the gyro.s motor current until it is restarted.
+Gyro 4 has also been displaying erratic bias jumps and this may be the
+signature of a impending failure. The PCS folks are prepared to switch
+out gyro 4 is necessary.
+
+
+Several IR telemetry points shifted by small amounts after Kernel Timer reset Sep 2015
+---------------------------------------------------------------------------------------
+
+During Sep anneal (2014.254 15:31:27, Sep 11), kernel timer counter was reset.
+The reset requires a reboot which can be conveniently 'hidden' after anneal.
+During this reset, some IR parameters shifted slightly:
+   IRBDACHI (ADC bias high, pg266)               from -1.973 V to -1.9735 V
+   IRDACREF (ADC ref, pg267)                     from 5.03 V to 5.031 V
+   IR1M1 (IR quads 1&2 -1 VDC, pg 279)		 from -1.012 V to -1.015 V
+   IR3FB1 (IR quads 3&4 fixed bias V, pg 290)    from 0.73 V   to ~0.729 V
+   IR3FB2 (IR quads 3&4 fixed bias V2, pg 291)   from 3.4012 V to 3.4013 V
+   IR3M1 (IR quads 3&4 -1 VDC, pg 295)           -1.015 V got slightly noisier
+(Page numbers are those from telemetry trend slide set sent out by CLong.)
+Previous resets did not show such shifts.
+
+
+HST safing June 4 2015 01:59 (2015.155; WFC3 not warmed up)
+-----------------------------------------------------------
+
+At 155/01:59 (Wednesday  9:59 PM), the NSSC-1 initiated safing
+resulting in halting the NSSC-1 SPC pointer and safing both COS and
+STIS.  A level 2 alert was issued and an anomaly meeting was held this
+evening on the conference line.  Initial investigation leads to a
+belief that a QBF SPC load for the NSSC-1 was not uplinked to the
+spacecraft after loads were reconfigured on the ground system for an
+intercept SMS.  Result was an SPC list exhaust in the NSSC-1. The
+spacecraft and instruments are in a safe state.  The HST486 SPC load is
+continuing to operate but there is no SI commanding. All subsystems
+verified their data this evening to ensure there are no other anomalous
+indications.  EPS just saw the expected changes resulting from COS and
+STIS safing.  
+
+ACS and WFC3 were both in their nominal Operate states and remain
+there, unaffected by the soft safing. Although none of the instruments
+were observing at the time, one WFC3 UVIS image remains in its buffer
+memory.
+
+
+
+
+Slight pressure spike on July 28,2014
+-------------------------------------
+
+The HST NCS pressure sensor reported an aft shroud pressure transient
+from the baseline of 1.07x10-7 to 3.92x10-7 Torr at 0941 on Day 209,
+2014 (July 28).
+
+The MEGG shows HST exiting the SAA having just completed a T4 slew with
+no observation underway. No HSTARs or Ops Requests were logged near
+this time. Space weather was benign and meteor activity was low. All
+other payload telemetry indicates nominal operation.
+
+Spacecraft systems not showing any anomalies so it's likely the source
+for the pressure transient is intermittent leakage from the NCS
+circulator loop O-rings due to the continuing system depressurization.
+There are limited sources of gas (including vapors) available to spoil
+the vacuum, and O-ring sealed systems tend to form leaks under similar
+conditions. There's no way to know if this could lead to a sudden loss
+of circulator loop pressure placing HV systems at risk but it is
+something to revisit. The only mitigation of this possibility would be
+to proactively vent the loop which would likely require powering off
+the FHSTs, not something likely to be recommended.
+
+So far, there have been two pressure transient events, the other
+occurring on day 282, 2013. For now, taking a wait-and-see approach and
+continue to monitor vacuum on a monthly basis looking for signs of a
+deteriorating situation.
+
+End of March, 2014
+------------------
+
+A number of enclosure and electronics board temperatures dropped by
+about 1C and have remained there ever since. Examples are in WFC3
+Thermal Enclosure slide sets and include:
+---> note added later: temp changes were due gyro switch
+     went from 6,4,5 (RSU 2,3) to 1,2,4 (RSU 1,2) [see Oct 2018 note too]
+
+IENAFTT - WFC3 enclosure panel aft
+IENBOTT - WFC3 enclosure bottom center
+IENBY1FT - WFC3 enclosure bay 1 forward
+IENBY2FT - WFC3 enclosure bay 2 forward
+IENTOPT - WFC3 enclosure top plate
+IENCEBT - enclosure adjacent CCD electronics box +V2
+IENDEBT - enclosure adjacent detector electronics box -V2
+IFITAT - WFC3 A fitting
+IFITBT - WFC3 B fitting
+IFITCT - WFC3 C fitting
+
+Other temperatures dropped as well, e.g. (not a complete list):
+IRIUATMP - remote interface unit A
+IRIUBTMP - remote interface unit B
+IRIUATMP - remote interface unit A
+IMEB1ST - main electronics box 1 side wall
+IMEB2ET - main electronics box 2 end wall
+IMEB2HPT - main electronics box 2 heat pipe
+IMEB2ST - main electronics box 2 side wall
+ICSTMP - control section board
+IRSPBTMP - IR sgnal processing board temperature
+IR3TMP - IR quadrants 3&4 board
+IR1TMP - IR quadrants 1&2 board
+IDEBET - detector electronics board end wall
+IDEBST - detector electronics board side wall
+
+
+HST Gyro 5 has failed - March 7, 2014
+-------------------------------------
+
+Email to st_all from K.Sembach: HST entered safe mode this morning due
+to the (anticipated) failure of Gyro 5. I wrote to you about the
+failing health of this gyro two weeks ago. The observatory and its
+instrumentation are healthy and configured safely, exactly as they
+should be. However, the gyro is no longer usable. Over the next few
+days, the STScI and GSFC operations teams will be working together on a
+variety of recovery tasks. 
+
+The first order of business will be to bring two of the hibernating
+gyros online for use by Hubble's pointing and control system. HST
+will then have four gyros powered, with a fifth in reserve. After
+about a week or so, one of those four gyros will be powered off for use
+later in the mission, and Hubble will operate in standard 3-gyro mode. 
+
+The gyros will be monitored over the weekend, and their drift rates
+will be tuned to assure the performance necessary to point Hubble
+accurately. In the meantime, we will be preparing a revised observing
+plan while Hubble's science instruments are brought back online.
+
+We expect to resume awesome Hubble science sometime late tomorrow
+(Saturday). Note from Ken later: "...Hubble's science instruments have
+been transitioned to their operating modes, and all were conducting
+science observations over the weekend.   The science timeline was
+picked up around noon Saturday with observations made by the Cosmic
+Origins Spectrograph, followed soon thereafter by observations with the
+Wide Field Camera 3 and the Advanced Camera for Surveys.  Space
+Telescope Imaging Spectrograph observations resumed on Sunday.
+[Saturday = 3/8/2014, day 067] ... In all,  Hubble was down for less
+than about 30 hours after the gyro failed."
+
+[Safemode KFSP: Kalman Filter Sun Point]
+
+
+HST Gyro 5 has flex lead failure - Feb 22,2014
+----------------------------------------------
+
+Email to st_all from K.Sembach: HST Gyro 5 experienced a flex lead
+failure this weekend, which will shorten the remaining useful life of
+the gyro. If lucky, we may get another month or two of run time on the
+gyro before it fails completely.
+
+HST uses gas-bearing gyros to sense changes in its position.  The full
+complement of six gyros was replaced during SM4, and today all 6 gyros
+are usable in their present condition. At any given time, we run three
+gyros to maximize scheduling flexibility, while preserving lifetime on
+the other three.  There are multiple failure modes for these gyros,
+one of them being flex lead failures like the one just experienced on
+Gyro 5.
+
+The flex leads are wires the width of a human hair that serve as the
+internal electrical connection to the fluid-filled portion of the gyro
+that contains the gyro elements responsible for sensing motion.  Each
+gyro contains two flex leads. These wires decay over time, as the
+copper in the silver-copper alloy comprising the wire interacts with
+trace amounts of bromine in the fluid. Eventually this decay causes an
+electrical open circuit, and the flex lead is no longer useful. The
+speed of this decay is hastened by heat, which is why the second flex
+lead often decays very quickly after the first is lost.  Once the
+first lead becomes an open circuit, the second lead has to carry twice
+the current, and heats up accordingly, hastening the decay.
+
+Gyro 5 has "traditional" flex leads - the kind that have been used in
+HST's gyros throughout the mission.  Three of the six gyros replaced
+during SM4 are of this type.  The three others are "enhanced" flex
+leads, which have a sliver plating on the leads that (presumably)
+protects the silver-copper alloy from degradation.  The enhanced-lead
+gyros also had some other production enhancements that should help to
+extend their usable lifetimes as well.
+
+HST is currently running on Gyros 4-5-6 (enhanced-standard-enhanced
+leads). When Gyro 5 (standard lead) fails, HST will enter safe mode,
+and it will take us approximately 1-2 days to recover the science
+timeline safely. The currently approved gyro contingency plan is to
+turn off Gyro 6 (enhanced lead) and turn on Gyros 1 and 2 (both
+standard leads) so that the standard lead gyros are used together,
+which is prudent since the standard-lead gyros can degrade due to
+parasitic heat from a companion gyro even when off. 
+
+The bottom line of all of this is that HST is aging - in a familiar
+(and expected) way.  There is no reason to be alarmed, as we have ways
+of operating HST with fewer than three gyros should we ever need to do
+so again.   For now, we will continue to operate on three gyros as long
+as possible, regardless of what happens to Gyro 5, in order to maximize
+the science return of the observatory.
+
+
+Slight pressure spike on Oct 9,2013
+-----------------------------------
+
+GSFC evaluation of fourth quarter of 2013 showed spike in  NCS Total
+Pressure Sensor (TPS) pressure data right around ~2013/282/02:00 UTC.
+WFC3 data evaluated WFC3 data before & after the event were nominal
+(SB). More details about the event (S.Swain): it was not huge spike
+e.g. like during ACS Side 2 failure in 2007 (>2e-5 torr). The 2013
+event rose to ~3x average level where sensor normally trends (~1.44e-7
+torr) along with exponential decay over ~2 full min of 10-sec sampled
+data (plus 1 sample of rise on front side of event). Sometimes spikes
+at this level are seen in trending but often can be attributed to data
+transients, though not this one.
+
+
+Secondary Mirror move on Nov 12, 2013
+-------------------------------------
+The secondary mirror move was successfully commanded on Tuesday,
+November 12, at 12:41 p.m (OPS request 19524) EST. The move of 3
+microns is expected to take the imaging instruments from approximately
+-2 microns to +1 micron of average secondary mirror offset from best SI
+focus. The next visit of the optical monitor program, from which phase
+retrieval determinations of focus are derived, will execute on Sunday,
+November 17.
+
+Boot-to-Operate on Sep 12,2013 in order to reset kernel time
+-------------------------------------------------------------------
+The stored commanding to reset the WFC3 kernel time through cycling the
+instrument to Boot and back to Operate was run on DOY 255 (September
+12, 2013) during part of anneal procedure. Anneal was observed to
+complete nominally.
+
+Notes: as for Aug 2012 boot-to-operate procedure, higher level of hot
+pixels present after aneal and bowtie-shaped hysteresis occurred and
+successfully removed with bowtie visit (this year, had back-to-back
+visits). New this year: small shifts in IR bias reference voltages were
+seen. No apparent change in data (IR refpix, IR photometry, relative
+gain levels as measured from IR intflats all the same before and after
+the reboot). HSTAR 13852 filed by S.Swain.
+
+
+ESB 677 message 118/07:10:31 (Aug 16,2013) - resolved as no problem
+-------------------------------------------------------------------
+
+WFC3 issued an ESB 677 message indicating that the kernel timer rolled
+over. The 10ms kernel time counter in the flight software rolls over
+every 1.1 years if you don窶冲 do a time code date. There had been no
+concern when power-cycling MEB every month via anneal. However, with
+the switch pre-launch to not power-cycle anything, stored commanding
+added a call to ITCUP command to ensure time code update - done a
+couple days ago. But that only resets Coarse timer, it does not reset
+Kernel timer. There was a possibility images had corrupted time-stamps
+but check of data headers showed no problem. WFC3 remained in Operate,
+no images lost.
+
+Resolution: WFC3 needs hardware or power-on reset of the MEB which can
+be done in a normal transition to Boot and back up to Operate (as is
+done for FSW installation). This will reset the Kernel timer. This will
+be done over the next anneal (planned for 255/22:32 UTC, Sep 12, 6:32
+EDT).
+
+¡™£¢The counters/clocks on WFC3: one is Kernel time (1 tick/10ms, 32bit
+value from iRMK operating system; 497 days before roll-over). Second is
+the Coarse timer (updates ever 32ms with RIU 1.024-MHz pulse, 30 bit
+register; goes 397 days until roll-over). Today is 365 days since last
+MEB restart [for CS 5.01 FSW installation Aug 2012). ESB is issued when
+either Kernel or Coarse time reflect elapsed time of 365 days, i.e.,
+merely warning that roll-over is getting close. Situation confirmed
+with memory dump. Unknown what would result if timer is not reset,
+perhaps nothing or may garble times.
+
+HSTAR 13769 - Aug 4, 2013
+-------------------------
+
+Day 216/16:56:11 UTC, on-call SI SE received notification that WFC3
+UVIS Amp A FIFO was not empty when the readout completed. Message was
+informational only (detector FIFOs are reset during normal
+end-of-readout processing). The readout in question as well as
+subsequent images were normal (from calibration proposal 13083,
+external CTE monitor). One possible cause is a single-event upset. WFC3
+not in SAA at the time of error but the part is similar to the one used
+in ACS & STIS, which have previously shown SEU susceptibility. 
+
+
+HST enters Software-Supoint safe mode - Feb 15, 2013
+----------------------------------------------------
+From the flash report re: +V3 SWSP on 2/15/13 046/08:11:37  
+The team concluded that the SWSP entry was caused by the solar array
+command profile test failing due to an overshoot of the +wing by 10.7ｰ
+relative to the commanded position, exceeding the 10ｰ threshold.  There
+was no immediate no health and safety concern. This is the eighth SADE
+slew anomaly of this type, the third with SADE 2-R. The belief is that
+all are radiation/EMI induced and are not permanent. As in previous
+events, a SADE on-orbit test will be conducted prior to resumption of
+the nominal science observation program.  The following information
+summarizes the anomaly briefing:
+ 
+More from Ken: Early this morning about 3:12 AM local time, HST entered
+what is known as "Software Sunpoint safe mode".   This is one of the
+primary (and relatively benign) safemodes that Hubble can enter when
+there is a problem with the spacecraft or its primary subsystems.  It
+is the same safemode Hubble entered on Christmas Eve, albeit for a
+different reason.  In today's case, a slightly off-nominal solar array
+slew caused the safing.   During the solar array slew, the measured
+position for one of the two arrays differed by more than 10 degrees
+from the commanded position for more than 3 seconds.   Hubble's
+spacecraft computer recognized that this was not normal, and onboard
+safing procedures were executed as expected. The suspected cause of the
+solar array deviation is a bit flip in one of the registers in the
+Solar Array Drive Electronics.  Such an error can be corrected and is
+not expected to be persistent.
+
+
+Secondary Mirror Move - Jan 24,2013
+-----------------------------------
+
+Ops Request 19347 was successfully completed at 024/17:58 to perform a
+six step secondary mirror move.  The move commanding for this 3.6
+micron adjustment was nominal. Following this, visit 2 of CAL/OTA
+13170, the focus monitoring program, was performed on January 26, 2013.
+This visit has been analyzed, and phase retrieval determinations of
+focus obtained. After modeled temperature corrections were applied, the
+mean focus of WFC3 over 1 orbit was found to be equivalent to -0.68
+microns at the secondary mirror. ACS was found to be +0.14 microns. The
+overall 1 sigma error on the model and measurements is ~1.5 microns, so
+the results of -0.68 and +0.14 are not inconsistent with the desired
+state of ~1.2 - 1.5 microns. Furthermore these numbers are
+significantly more positive than nearly everything obtained in the past
+half year, so they very strongly indicate that a move in the right
+direction and of approximately the right amount occurred. It is not
+possible in a single measurement to accurately measure the focus but
+the results obtained are consistent with the belief that the secondary
+mirror move went exactly as planned.
+
+
+
+HST enters Software-Sunpoint safe mode - Dec 23, 2012
+-----------------------------------------------------
+
+Safe mode entered because SA slew commands were inadequately spaced.
+Note from Ken Sembach: "Last night Hubble entered software sunpoint
+safemode.  This safing occurred as the result of timing issues
+associated with multiple solar array moves while the vehicle was
+performing a dog-leg slew to set up for the next astronomical
+observation.   Dog-leg slews are rare for Hubble, but are occasionally
+needed to avoid the solar exclusion zone when moving from one target to
+the next.   As Hubble slews, the solar arrays are often moved to ensure
+that there will be sufficient electrical power at the new observatory
+attitude.  In this particular case, the arrays needed to be moved
+twice, once during each leg of the vehicle dog-leg maneuver.  Initial
+analysis suggests that the timing of the commanding for the two solar
+array moves collided, thereby resulting in failure of the standard test
+that checks to see if the solar arrays moved properly.  Given the
+importance of the solar array positioning to the health of the
+observatory (no solar power = huge problems), Hubble did what it was
+supposed to do - it put itself into an appropriate power-positive safe
+mode and waited for help from the ground.  The timing problem has
+likely been lurking in the ground system for 20+ years, but has not
+manifested itself previously because the combination of a dog-leg
+vehicle slew with multiple solar array moves is so rare.  Our team will
+perform new timing checks manually until a software fix can be put in
+place to make sure we do not encounter this type of event in the
+future. "
+
+
+
+FSW Update Aug 16,2012 - UVIS shutter will still open even if TDF down
+-------------------------------------------------------------------------
+
+The update changes the WFC3 shutter operation when the TDF (take data
+flag) is down at the beginning of long (>200s) exposures. This change
+will allow possible salvage of data if the TDF comes up late. There are
+no health & safety concerns for the WFC3/CCD.
+
+Previous behavior:
+1) exptime < 200s: ignore TDF state, open shutter for full exposure
+2) exptime > 200s: if TDF down at exposure start, never open shutter,
+set exptime = 0
+
+New behavior:
+1) exptime < 200s: ignore TDF state, open shutter for full exposure
+2) exptime > 200s: ignore TDF state, open the shutter. BUT: if TDF
+state changes (goes down), then the shutter is closed for the remainder
+of the exposure (exptime keyword updated appropriately)
+
+Note: in new FSW, TDFNUM and TDF time information remain 0, generic
+conversion will not indicate that TDF was down at the start. EXPTIME is
+still correct (shutter was open even if TDF down) but EXPFLAG will
+indicate the condition (will use TDFBEGIN for the string 'TDF down').
+
+
+
+Exposure limit for a visit increased from ~100 to 304 - July 4,2011
+-------------------------------------------------------------------
+
+June 16-18 -- FSW testing/reviews
+June 22	   -- FSW software activated, followed by STScI installation of
+new Trans executable that supports increased image headers
+July 4     -- Trans software available for July 4th SMS processing
+
+In the past, science header buffer limits required a buffer dump after
+the acquisition of ~100 images even if the science data buffer was not
+yet full, a situation occasionally encountered when taking subarrays.
+New commanding and ground system updates now set the science header
+buffer limit at 304 image headers. Assuming the data buffer limit is
+not exceeded, 304 images can be taken before an image dump is required.
+Note that 'image' in this context is a UVIS frame or a single IR
+readout (IR sample sequences can contain up to 16 images).
+
+The WFC3 CS 5.0 (IV0037) Flight Software is expected to be uplinked
+this week during days 167-169 [June 16-18,2011].  As a result, special
+considerations were taken into account during the scheduling and the
+PASS processing.
+
+Day 167 (Thurs): No WFC3 usage from 14:00-21:45UT (10am - 5:45pm)
+                 No MAT-LEI reduction during that timeframe which
+		 leaves a conservative count of 180+ minutes of
+		 forward time.
+		 
+Day 168 (Fri):   No WFC3 usage from 12:00-00:00UT (8am - 8pm)
+                 No MAT-LEI reduction during that timeframe which
+		 leaves a conservative count of 300+ minutes of
+		 forward time.
+		 
+Day 169 (Sat):   WFC3 observations throughout 12:00-00:00UT (8am - 8pm)
+                 No MAT-LEI reduction during that timeframe.
+		 Counting forward time between WFC3 observations
+		 leaves a conservative count of 170+ minutes of
+		 forward time.  This day is contingency.
+
+
+WFC3 FSW update - June 2011
+---------------------------
+From Tom Wheeler
+
+WFC3 FSW CS 5.00 was activated. This requires a
+Operate-to-Boot-to-Operate transitions that copies the new operate
+image from EEPROM to EXEC RAM where the operate code executes from.  CS
+5.00 was installed into EEPROM earlier.
+
+June 21, 2011, MJD 55733.857976, 2011.172 20:35:29 IDEBPWR2 cycled to off.
+Ops Request 19104-7 Install WFC3 CS FSW 5.00 (IV0037)
+FSW CS 5.00 was activated by transitioning to Boot followed by
+transitioning back to Operate See SMS excerpts below:.
+
+                                      **********2011.172:20:35:08.000********** 
+ 091I1001  :TEXT,TIME=(ORB,115701,EASCNCR,06H51M34.000S);             S54079680*
+        TIME=2011.172:20:35:08.000                                    R54051920$
+           BEGINTEXT;                                                 S54079690*
+                 RECON- WFC3 SI Operate to Boot                     ;;S54079700*
+                    Special Version, omits Event Flag commanding      S54079700*
+           ENDTEXT                                                  ;;S54079710*
+           ;SMSTIME=2011.172:20:35:06.000                             S54079720*
+
+                                     **********2011.172:21:03:22.000********** 
+ 091I2001  :TEXT,TIME=(ORB,115705,EASCNCR,56M54.000S);                S55000200*
+        TIME=2011.172:21:03:22.000                                    R55000080$
+           BEGINTEXT;                                                 S55000210*
+                 RECON- WFC3 SI Boot to Operate                     ;;S55000220*
+                    Special Version, omits TEC commanding             S55000220*
+           ENDTEXT                                                  ;;S55000230*
+           ;SMSTIME=2011.172:21:03:20.000                             S55000240*
+
+                                      **********2011.172:21:03:22.000********** 
+           /CMD,MRSTTBSW,FLAG1,RSTTBSW,WFC3,TIME=(ORB,115705,EASCNCR;;S55000250*
+           ,56M54.000S)                                             ;;S55000250*
+           ;SMSTIME=2011.172:21:03:20.000                             S55000250*
+        TIME=2011.172:21:03:22.000                                    R55000090$
+
+
+NSSC-1 FSW BL/BQ 9.2.0 - March 2011
+-----------------------------------
+
+From Tom Wheeler
+March 8, 2011, MJD 55628.568969, 2011.067 13:39:19, IDEBPWR2 cycled to
+off: NSSC-1 FSW BL/BQ 9.2.0 was loaded during this time period. Ops
+Request 19038 Inhibit NSSC1 ATP and transition WFC3 to TECSAFE (All SIs
+are transitioned to Safe mode (TECSafe for WFC3).
+
+Ops Request 19037 WFC3 RT Recovery Post-NSSC-1 9.2.0 Installation (WFC3
+is recovered to Operate).
+March 8,2011, MJD 55628.667812, 2011.067 16:01:39 IDEBPWR2=On.
+
+
+
+UVIS internals under new CSM management - June 2010
+---------------------------------------------------
+
+CSM is now automatically placed in IR position when taking UVIS biases
+and darks (vice-versa for IR darks). The first UVIS internal taken in
+this configuration is part of 11905 monitoring program, taken at
+2010.173:02:04:52.000. NOTE: Cycle 17 anneal proposal not retrans'd so
+internals associated with it (11909) after June2010 have CSM=UVIS.
+
+IR darks had been using CSM=UVIS since July 5, 2009 via manual
+specification in APT of special commanding  but now have auto-CSM=UVIS
+as well. Handful of IR darks in Aug 2009 plus darks in Oct-Nov 2009
+still have CSM=IR.
+
+
+more cooldown time in anneal procedure - Oct 16,2009 
+----------------------------------------------------
+
+The anneal procedure commanding has been changed to allow more time for
+cooldown after the anneal. Originally, there was a 1 hr wait between
+the TECFIRE enable and the start of CCD preheat to operate. However,
+during the Sep 2009 anneal, the power draw reached a high of 256w,
+relatively close to the limit of 263w. The new commanding includes an
+additional 3 hours wait which provides time for the radiator to cool
+off before it receives more TEC load, thus reducing the required power.
+This same wait has also been inserted into the "Boot to Operate"
+reconfiguration (used e.g. during recovery of the instrument after
+safings).
+
+-------------------------------------------------------------------------------------------------------------
+Details --- Safings
+-------------------------------------------------------------------------------------------------------------
+
+Oct 20, 2014
+------------
+Lockup of Science Instrument Control & Data Handling unit occurred at
+2014/293 1722UTC. Such lockups have occurred previously; this is the
+fifth since SM4. The last event was in June 2012 (rate estimated at 1-2
+per year). WFC3 did not warm up. Science observation resumed on October
+22, 2014, at 04:20 UTC.
+
+Initial engineering note: TelAlert issued a spacecraft problem
+notification at 2014/293 1722UTC. STScI engineering has confirmed a
+standard SIC&DH lockup signature (except ACR3 was not picked up by the
+analysis system). The spacecraft continues to operate normally although
+there is no communication with the payload. It is assumed that the
+science instruments have dropped into the pseudo-Boot state. Following
+SI SE verification of the lockup approval will be sought to recover the
+payload per contingency operating procedure 9.21.
+
+June 2, 2012
+------------
+SIC&DH lockup occurred at 13:48. Engineering note: TelAlert issued a
+spacecraft problem notification at 2012/154 1348UTC. STScI engineering
+has confirmed a standard SIC&DH lockup signature. 
+
+
+Sep 27, 2011
+------------
+
+An electronic upset in SIC&DH (Science Instrument Control and Data
+Handling Unit) occurred 270/09:37:52 UT. The SIC&DH contains the
+payload computer as well as the electronics necessary for formatting
+the science data and communicating with the science instruments. Such
+upsets have been seen before (see below) and are expected to continue
+to occur occasionally. This is the first one seen in over a year (the
+last was Sep 9, 2010). The lockup had the same characteristics as
+previous incidents so the standard SI and SIC&DH realtime recovery
+procedures were performed. WFC3 recovery to Operate was successfully
+completed at 270/17:08 UTC. 
+
+An ACS anneal was in progress when the lock-up happened, so ACS was
+safed to stop the anneal. Intercept science schedules were prepared by
+operations team here at STScI. These observing timelines were uploaded
+to the observatory over night, and HST resumed science early this
+morning Sep 28,2011, less than 24 hours after the upset.
+
+As a side note, one fringe benefit of the lock-up event today allowed
+for the verification of the FSW modifications to the MEB reset actions
+taken by COS, STIS, and WFC3 that were incorporated on-orbit over the
+past year. Three Fixed mode dumps for these SIs analyzed by Payload FSW
+indicated that all expected actions were indeed taken. A new SMS is
+expected to start at 6am Sep 28, 2011.
+
+
+ 
+Oct 4, 2010
+-----------
+
+Not a safing but starting at 277/0143z, SDF failed to properly output
+science data after a software change was implemented to lower the
+SIC&DH temperature by cycling the Science Data Formatter (SDF) inputs
+with the outputs.
+
+In response to the failure of the SDF to properly output science data,
+the NSSC-1 ATP was inhibited at 277/19:10 and SDF input enabled via Ops
+Request 18933.  This was in preparation for the recovery of the SIs and
+intercept of the reprocessed SMS (software changed is backed out); SMS
+began on 2010.278 14:20:20.00000.
+
+
+Sep 9, 2010
+-----------
+
+The HST Science Instrument and Data Handler (SIC&DH) safed at 252
+/22:39:21z. The anomaly is being evaluated to ensure that the signature
+is the same as previous events. The last lockup occurred 11/2/09. 
+
+From an email sent by K.Sembach Sep 12,2010:
+
+Thursday evening HST experienced an electronic upset in its Science
+Instrument Control and Data Handling Unit (SI C&DH).  This is the
+device that contains the payload computer as well as the electronics
+necessary for formatting the science data and communicating with the
+science instruments.
+
+Such upsets are expected to occur occasionally.  This is the first one
+seen in almost a year, and only the fourth since SM4.  The last event
+occurred in November 2009, so we have been rather fortunate.  This 
+event appeared to be very similar to previous upsets in the Control
+Unit / Science Data Formatter section of the SI C&DH.  SI C&DH control
+was restored quickly through standard procedures that are now in place
+for such events.
+
+All of the science instruments were placed in a safe configuration
+following the upset, and an intercept science schedule was prepared by
+our operations team here at STScI.  That observing timeline was
+uploaded to the observatory yesterday,and HST resumed science late last
+night,.
+
+
+
+Nov 02,2009 
+-----------
+
+WFC3 now has a modified safe state in which the TECs remain powered.
+
+From Ken Sembach email... 
+
+Yesterday afternoon, the the Control Unit /Science Data  Formatter
+(CU/SDF) inside Hubble's Science Instrument Command  & Data Handling
+(SI C&DH) unit "locked up" again.  This is the second occurrence of a
+lockup in 12 days, and the  third since SM4.  All three events look
+very similar, with an exact cause yet to be determined.  At present,
+there is no obvious remedy for such lockups other than to power cycle
+the  SI C&DH.  Fortunately, the anomalous condition is relatively 
+benign, though it is not completely without risk.  An effort to
+understand the condition more completely is in progress.
+
+The GSFC and STScI response teams did a super job of restoring 
+functionality to the SI C&DH, safing the science instruments,  and
+replanning the scheduling timeline to get back to  science early this
+evening.  Total recovery time in this case was only ~26 hours, compared
+to ~41 hours two weeks ago.   Congratulations to all involved in the
+recovery effort.
+
+			---------------
+
+Oct 22,2009
+-----------
+
+From Ken Sembach email...
+
+This morning at approximately 8:30 AM, the Control Unit / Science Data
+Formatter (CU/SDF) inside Hubble's Science  Instrument Command & Data
+Handling (SI C&DH) unit "locked up". If this sounds vaguely familiar,
+it's because it has occurred before.  This anomaly, which appears to be
+of the same type  as occurred in the middle of June, results in a loss
+of  communication with the science instruments (ACS, COS, NICMOS, STIS,
+WFC3) until the lockup is cleared.  No commands can get to the
+instruments, and no data or  telemetry can get out.
+
+The lockup was cleared successfully by power cycling the  SI C&DH (as
+expected).  Soon afterwards, the science  instruments and the NICMOS
+Cooling System were configured  into their safe states through
+commanding sent from the  ground.  All of the science instruments are
+presently  safe and are configured so that they can be brought back  on
+line in the coming days with standard recovery procedures.  In the
+meantime, our scheduling team is hard at work  preparing for these
+activities and a return to science  at the beginning of next week.  On
+Monday a decision will  be made about how and when to restart the
+NICMOS Cooling  System.
+
+Hubble's other systems (power, communications, attitude  control, FGSs,
+etc) continue to function well and were not affected by this anomaly.
+
+-------------------------------------------------------------------------------------------------------------
+Bowtie monitor outliers
+-------------------------------------------------------------------------------------------------------------
+
+Plot presented as day since first observation (June 11,2009 = MJD 54993).
+
+ratio	day	level		comment
+-----	---	-----		-------
+
+
+-------------------------------------------------------------------------------------------------------------
+
